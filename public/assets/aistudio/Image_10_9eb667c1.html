@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "on-background": "#111c2d", "tertiary-fixed-dim": "#d2bbff", "on-error": "#ffffff", "on-primary-container": "#7a92b0", "secondary-fixed-dim": "#6bd8cb", "error": "#ba1a1a", "on-error-container": "#93000a", "inverse-primary": "#b0c9e8", "surface-container-high": "#dee8ff", "tertiary-container": "#35007a", "primary-fixed-dim": "#b0c9e8", "on-secondary-fixed": "#00201d", "outline": "#74777e", "surface-container": "#e7eeff", "on-surface-variant": "#43474d", "background": "#f9f9ff", "surface-container-low": "#f0f3ff", "primary": "#00152a", "outline-variant": "#c3c6ce", "surface-dim": "#cfdaf2", "on-tertiary-container": "#a375ff", "on-secondary-fixed-variant": "#005049", "surface-variant": "#d8e3fb", "secondary": "#006a61", "on-tertiary-fixed": "#25005a", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#314863", "primary-fixed": "#d1e4ff", "inverse-surface": "#263143", "on-tertiary-fixed-variant": "#5a00c6", "surface-bright": "#f9f9ff", "tertiary-fixed": "#eaddff", "on-secondary-container": "#006f66", "on-primary": "#ffffff", "secondary-fixed": "#89f5e7", "surface-tint": "#49607c", "primary-container": "#102a43", "surface": "#f9f9ff", "surface-container-highest": "#d8e3fb", "on-surface": "#111c2d", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "tertiary": "#1c0047", "inverse-on-surface": "#ecf1ff", "on-primary-fixed": "#011d35", "secondary-container": "#86f2e4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1rem", "space-sm": "0.5rem", "margin": "2rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem" }, "fontFamily": { "title-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "display-lg": ["Plus Jakarta Sans"] }, "fontSize": { "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="bg-surface-container-low px-margin-mobile py-space-xs flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs text-on-surface-variant overflow-hidden"><span class="material-symbols-outlined text-[14px] text-secondary shrink-0">info</span><p class="font-label-sm text-label-sm truncate">Educational &amp; Public Health Intelligence platform. Not for acute clinical emergency.</p></div><a class="shrink-0 inline-flex items-center gap-1 bg-secondary-container text-on-secondary-fixed px-space-sm py-0.5 rounded-full font-label-sm text-label-sm hover:opacity-90 transition-opacity" href="tel:16263"><span class="material-symbols-outlined text-[13px] text-secondary">support_agent</span><span class="hidden xs:inline">16263</span><span>Batayon</span></a></div><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm shrink-0"><img alt="HHD Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_8e34yvVGR9vVF7TCF8GcEFjAgRpjWaTtumehbY6EGf7PrBZitkBKkPheW2jCACJzdumDGSoyAiG6JlQh4dhQB5HjXsp1871NXrJ7NY6HLCh1ccmnRJEIi5yn6TfTBxCfVeJa6kRTbG9BDDB6r_Ks4iGmv86O7U5BTVY0r0A4JXlt1McVsWws86O5yy2-nrVhPLTZa_Qa03Y6OW_bQ1KUfcK0DVd32vmrP8AsfTyby8jlGxaYenehVKc"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">HHD</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Intelligence</span></div></div><div class="flex items-center gap-space-sm"><div class="inline-flex items-center p-0.5 rounded-full bg-surface-container"><span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary">EN</span><span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">বাংলা</span></div><button aria-label="Search Intelligence" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="relative shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsA7K8Z4_LdQz1l41LtFcWDD0t8YtXOGcJ_wCDN4j2zKU8TSiAkddMTvtEicxghgKmkQH6qBSaUVt3cKEzG7LauP8yqkU5XwlzYSB8WgQ7RgyZdCMJHzLzUNzTbdIn3kzvvQ-4fJmMltaUOla1YQkw546W1apwuuOpGyihq1tx_bUMm14Imt5-cVtcVJKuNKvdkRT9N3A9s8BRfD9EjOZMc3tKKGxZVEYKTikAMgcMO-zJIxqw7toN"/><span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-secondary text-on-secondary rounded-full flex items-center justify-center ring-2 ring-surface text-[9px]"><span class="material-symbols-outlined text-[10px]">verified</span></span></div></div></div><nav aria-label="Contextual Topics" class="flex items-center gap-space-md px-margin-mobile pb-space-sm overflow-x-auto no-scrollbar"><a class="font-label-md text-label-md text-on-surface font-semibold whitespace-nowrap" href="#">All Feeds</a><a class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hover:text-on-surface" href="#">Research &amp; Evidence</a><a class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hover:text-on-surface" href="#">Field Ops</a><a class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hover:text-on-surface" href="#">Expert Portal</a><a class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hover:text-on-surface" href="#">Data Lab</a></nav></div></header><main class="flex flex-col relative w-full pt-32 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Interactive Status Ticker -->
+<div class="px-margin-mobile pt-2 pb-1">
+<div class="flex items-center justify-between bg-surface-container-low px-space-md py-space-xs rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse shrink-0"></span>
+<p class="font-label-sm text-label-sm text-on-surface truncate">
+<span class="font-semibold text-secondary">Live Geo-Registry:</span> 64 Districts Active
+        </p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant shrink-0 bg-surface-container px-2 py-0.5 rounded-full">DGHS Synced</span>
+</div>
+</div>
+<!-- Header Text Group -->
+<div class="px-margin-mobile pt-3 pb-2">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed mb-2 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">Public Health Directory</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Bangladesh Health Access</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+      Verified directory of low-cost prevention programs, certified hemoglobinopathy screening labs, and Upazila public health facilities.
+    </p>
+</div>
+<!-- Geographic & Service Filter Hub -->
+<div class="px-margin-mobile py-2">
+<div class="bg-surface-container-lowest p- space-md p-4 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span> Filter Facilities
+        </span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline cursor-pointer" id="reset-filter-btn" type="button">
+          Reset Filter
+        </button>
+</div>
+<!-- Selectors Group -->
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Division Selector -->
+<div class="relative bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">location_city</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Division</span>
+<span class="font-title-md text-title-md text-primary truncate" id="selected-division">Dhaka Division</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">expand_more</span>
+<select class="absolute inset-0 opacity-0 w-full h-full cursor-pointer" id="division-dropdown">
+<option selected="" value="Dhaka">Dhaka Division</option>
+<option value="Chittagong">Chittagong Division</option>
+<option value="Sylhet">Sylhet Division</option>
+<option value="Rajshahi">Rajshahi Division</option>
+<option value="Khulna">Khulna Division</option>
+<option value="Barisal">Barisal Division</option>
+<option value="Rangpur">Rangpur Division</option>
+<option value="Mymensingh">Mymensingh Division</option>
+</select>
+</div>
+<!-- District Selector -->
+<div class="relative bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">map</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">District</span>
+<span class="font-title-md text-title-md text-primary truncate" id="selected-district">All Districts</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">expand_more</span>
+<select class="absolute inset-0 opacity-0 w-full h-full cursor-pointer" id="district-dropdown">
+<option selected="" value="All">All Districts</option>
+<option value="Dhaka">Dhaka</option>
+<option value="Gazipur">Gazipur</option>
+<option value="Narayanganj">Narayanganj</option>
+<option value="Chittagong">Chittagong</option>
+<option value="Sylhet">Sylhet</option>
+</select>
+</div>
+<!-- Service Type Selector -->
+<div class="relative bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">biotech</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Clinical Capability</span>
+<span class="font-title-md text-title-md text-primary truncate" id="selected-service">HPLC Thalassemia Screening</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0">expand_more</span>
+<select class="absolute inset-0 opacity-0 w-full h-full cursor-pointer" id="service-dropdown">
+<option selected="" value="HPLC">HPLC Thalassemia Screening</option>
+<option value="CBC">Complete Blood Count (CBC)</option>
+<option value="Prenatal">Prenatal DNA Testing</option>
+<option value="NCD">NCD Early Diagnostics</option>
+<option value="All">All Public Health Services</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- View Switcher (Map vs List) -->
+<div class="px-margin-mobile py-2">
+<div class="bg-surface-container p-1 rounded-xl flex items-center shadow-inner">
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1.5 transition-all text-on-surface-variant hover:text-on-surface" id="view-map-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">explore</span>
+<span>Map View</span>
+</button>
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1.5 transition-all bg-surface-container-lowest text-primary shadow-sm font-semibold" id="view-list-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">view_list</span>
+<span>List View (4 Available)</span>
+</button>
+</div>
+</div>
+<!-- Map Visual Panel (Toggleable, default preview mode) -->
+<div class="hidden px-margin-mobile py-2" id="map-panel">
+<div class="relative w-full rounded-xl overflow-hidden shadow-sm bg-surface-container-low">
+<div class="w-full h-56 bg-cover bg-center" data-location="Dhaka, Bangladesh" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6pKRhhOBYajHbKGmnnvOODCAO9Rz_vH2tBHbHqeBvwyXVTV6PZoqEL4OB_9UVkHH3aIkwKvNgWK9AkZWUfeb--8RtZo611ZZ1PJyrFrrNBvX8plQFDJcHT6btCzfagkvTfajLvWwRcCZEiiTZD-v1ObEBe59METoCVRVdM52HksBB3iLOd9_Rflkzgs5MhPQxqID0t30uxGvZ6ZyX7q6_dAY8GmXAZrPgOlESlFnFLFCT8CHihYdD')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex flex-col justify-end p-3 text-on-primary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">pin_drop</span>
+<span class="font-label-md text-label-md font-semibold">National Public Lab Grid</span>
+</div>
+<p class="font-body-sm text-body-sm text-surface-container-low line-clamp-1">Showing 4 verified regional referral institutes across Bangladesh</p>
+</div>
+</div>
+</div>
+<!-- Facility Cards Feed -->
+<div class="flex flex-col gap-3.5 px-margin-mobile pt-2" id="facility-list">
+<!-- Facility 1: Bangladesh Thalassemia Samity Hospital -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="relative h-32 w-full bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A brightly lit medical diagnostic center in Dhaka with patient reception, lab technicians in white coats operating HPLC electrophoresis machines, safe clinical public health setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiJwJhebbHYO70YtSiTy1b_mRlilejAg6X7O7G15ySNeRGMK1YVzHGK5U5EZwNlaBOecAwLKN6jJtVDTT-iurtbNY9hzbLVb09P0fGCyt7ncvKmS6lsxJNRF7Fic2tCN1IEBDCuC-_zka5m3ByDuPO5qdQ2-vwPitcYp8I__NHFquvM6NEXghnRs3zJY7qDqlURRqhcP-N8M95fVOAFmmrPvdln2OOlaV0pjEPS3nkEtdOQwLPCJlE"/>
+<div class="absolute top-2.5 left-2.5 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">DGHS / HHD Accredited</span>
+</div>
+<div class="absolute bottom-2 right-2.5 bg-primary/85 text-on-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm">
+          Verified Jan 2025
+        </div>
+</div>
+<div class="p-4 flex flex-col">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-md text-title-md text-primary leading-tight">Bangladesh Thalassemia Samity Hospital</h2>
+<div class="flex items-center gap-1 text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[15px] text-secondary shrink-0">location_on</span>
+<span class="font-body-sm text-body-sm truncate">Green Road, Dhanmondi, Dhaka</span>
+</div>
+</div>
+<span class="shrink-0 bg-secondary-container text-on-secondary-fixed px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold">Non-Profit</span>
+</div>
+<!-- Capability Tags -->
+<div class="flex flex-wrap gap-1.5 mt-3">
+<span class="bg-surface-container-low text-primary px-2.5 py-1 rounded-full font-label-sm text-label-sm">
+            Complete Blood Count (CBC)
+          </span>
+<span class="bg-surface-container-low text-secondary px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold">
+            HPLC Hemoglobin Electrophoresis
+          </span>
+<span class="bg-surface-container text-on-surface px-2.5 py-1 rounded-full font-label-sm text-label-sm">
+            Free Genetic Pre-test Counseling
+          </span>
+</div>
+<!-- Subsidized Cost & Timings Matrix -->
+<div class="mt-3.5 pt-3 bg-surface-container-low/60 rounded-lg p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">payments</span>
+              Estimated Cost:
+            </span>
+<span class="font-title-md text-title-md text-secondary font-bold">৳ 800 - ৳ 1,200</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+              Operating Hours:
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Sun–Thu 8:00 AM – 5:00 PM</span>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="flex items-center gap-2 mt-3.5 pt-1">
+<a class="flex-1 min-h-[44px] bg-primary text-on-primary rounded-lg flex items-center justify-center gap-1.5 font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" href="tel:+88029664412">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>+880 2 9664412</span>
+</a>
+<button class="px-3.5 min-h-[44px] bg-surface-container text-primary rounded-lg flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+<span>Map</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Facility 2: BSMMU Dept. of Hematology -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="relative h-28 w-full bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="The modern university hospital pavilion at Bangabandhu Sheikh Mujib Medical University Shahbagh Dhaka with clinical staff, students, and hematology molecular genetics laboratory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXs-WPi_G2kDzTdzEF44XDcuwM_bZ_HHVfQijWYIvGa7ATZVqvaQ7Cf5ohoKhA0BDhqXPltMRjWjH9J49BBSWT6NpFwjxbllz16NI3ZhaXhuJYVpfvGYR_XojQ1xG-ExSVDvvdo8G2w6H2umLXDAkQNHdE-HsNom5aFkk1vwJdJP99BPHq8LnDNM79097f09lTEAJeK91_3YIzbxoypn6fXRYeNvUY74bP0DZUeLTZDNbTvTGWFjxY"/>
+<div class="absolute top-2.5 left-2.5 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">DGHS / HHD Accredited</span>
+</div>
+<div class="absolute bottom-2 right-2.5 bg-primary/85 text-on-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm">
+          National Center of Excellence
+        </div>
+</div>
+<div class="p-4 flex flex-col">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-md text-title-md text-primary leading-tight">BSMMU Dept. of Hematology</h2>
+<div class="flex items-center gap-1 text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[15px] text-secondary shrink-0">location_on</span>
+<span class="font-body-sm text-body-sm truncate">Shahbagh, Ramna, Dhaka</span>
+</div>
+</div>
+<span class="shrink-0 bg-surface-container-high text-primary px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold">Apex Gov Lab</span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-3">
+<span class="bg-surface-container-low text-primary px-2.5 py-1 rounded-full font-label-sm text-label-sm">
+            Hemoglobinopathy Panel
+          </span>
+<span class="bg-surface-container text-secondary px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold">
+            Prenatal Molecular Diagnosis
+          </span>
+<span class="bg-surface-container-low text-on-surface-variant px-2.5 py-1 rounded-full font-label-sm text-label-sm">
+            DNA Mutation Testing
+          </span>
+</div>
+<div class="mt-3.5 bg-surface-container-low/60 rounded-lg p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">payments</span>
+              Institutional Fee:
+            </span>
+<span class="font-title-md text-title-md text-primary font-bold">Govt. Regulated Tariffs</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">event_available</span>
+              Appointment Desk:
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Outdoor Block C, Level 3</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-3.5 pt-1">
+<a class="flex-1 min-h-[44px] bg-primary text-on-primary rounded-lg flex items-center justify-center gap-1.5 font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" href="tel:16263">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>Query via Batayon (16263)</span>
+</a>
+<button class="px-3.5 min-h-[44px] bg-surface-container text-primary rounded-lg flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Protocols</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Facility 3: Chittagong Medical College Hospital (CMCH) -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="relative h-28 w-full bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Chittagong Medical College Hospital campus with clinical hematology ward, doctor consultation desk, and families receiving regional health counseling in southern Bangladesh." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWdimPGhngkoOTFE1GwHmNADpq8k-Df-UaBtv-0D8T0Oa6-4_-4RyeAD4vKrhmSqwYUCcUrt2XEjW4W5Wbi2S2KeWdI5_je1EYv8Hl4s8jVw9ZJZY65DrYgqreTr_5K26jtlA5RLAdm2XXgv2bPPIRj_7ftz7R070BgIww7Qgff1yki6d_4Hhu2GRwAL4U1kjLwZqg6yXd3ltdRlebG0d-711gJTrzYBblwwP5xhDWb5Eyihp2JqE5"/>
+<div class="absolute top-2.5 left-2.5 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">DGHS / HHD Accredited</span>
+</div>
+<div class="absolute bottom-2 right-2.5 bg-primary/85 text-on-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm">
+          Division Hub
+        </div>
+</div>
+<div class="p-4 flex flex-col">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-md text-title-md text-primary leading-tight">CMCH Thalassemia Care Center</h2>
+<div class="flex items-center gap-1 text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[15px] text-secondary shrink-0">location_on</span>
+<span class="font-body-sm text-body-sm truncate">Panchlaish, Chittagong</span>
+</div>
+</div>
+<span class="shrink-0 bg-secondary-container text-on-secondary-fixed px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold">Public Tertiary</span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-3">
+<span class="bg-surface-container-low text-primary px-2.5 py-1 rounded-full font-label-sm text-label-sm">
+            Clinical Screening
+          </span>
+<span class="bg-surface-container text-secondary px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold">
+            Blood Safety Unit
+          </span>
+<span class="bg-surface-container-low text-on-surface-variant px-2.5 py-1 rounded-full font-label-sm text-label-sm">
+            Regional Family Counseling
+          </span>
+</div>
+<div class="mt-3.5 bg-surface-container-low/60 rounded-lg p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">schedule</span>
+              Service Hours:
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Daily 8:30 AM – 2:30 PM</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">bloodtype</span>
+              Safe Blood Access:
+            </span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Transfusion Unit Onsite</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-3.5 pt-1">
+<a class="flex-1 min-h-[44px] bg-primary text-on-primary rounded-lg flex items-center justify-center gap-1.5 font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" href="tel:+88031619400">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>+880 31 619400</span>
+</a>
+<button class="px-3.5 min-h-[44px] bg-surface-container text-primary rounded-lg flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>Share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Facility 4: Sylhet MAG Osmani Medical College Hospital -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="relative h-28 w-full bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Sylhet MAG Osmani Medical College Hospital building facade surrounded by green trees with public non-communicable disease outpatient testing clinic in northeastern Bangladesh." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM4wDoQ3q1Rss5X-XxAQiE1TASkcm1SLtxEXcvcm4Ig_371HG_z4ZU5r1dlJuiBrD57OIbSc-hmLLAU_UirE4pRVvepFBwxYyG3UvnBSPJCcxN70sUplFZiCQV3Bl7fbYKhAqt7EcgsG5_B6ydGYfJO_xjMUKoSkTCMpAWiBeM9RiikXIs_trSvHZwXvzdMUK4JEl8usrM4o8V8ErRAN0jh53vYjje3nvjudrg4rEVKKB9cMxL-0I3"/>
+<div class="absolute top-2.5 left-2.5 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">DGHS / HHD Accredited</span>
+</div>
+<div class="absolute bottom-2 right-2.5 bg-primary/85 text-on-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm">
+          Sylhet Division
+        </div>
+</div>
+<div class="p-4 flex flex-col">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-md text-title-md text-primary leading-tight">Sylhet MAG Osmani Medical College Hospital</h2>
+<div class="flex items-center gap-1 text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[15px] text-secondary shrink-0">location_on</span>
+<span class="font-body-sm text-body-sm truncate">Medical Road, Kajolshah, Sylhet</span>
+</div>
+</div>
+<span class="shrink-0 bg-surface-container-high text-primary px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold">Public Tertiary</span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-3">
+<span class="bg-surface-container-low text-primary px-2.5 py-1 rounded-full font-label-sm text-label-sm">
+            NCD Early Screening
+          </span>
+<span class="bg-surface-container text-secondary px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold">
+            Diabetes &amp; Hypertension Center
+          </span>
+<span class="bg-surface-container-low text-on-surface-variant px-2.5 py-1 rounded-full font-label-sm text-label-sm">
+            Carrier Testing
+          </span>
+</div>
+<div class="mt-3.5 bg-surface-container-low/60 rounded-lg p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">medical_services</span>
+              Specialized Unit:
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">NCD Prevention Cell (Gate 2)</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">payments</span>
+              Patient Registration:
+            </span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Standard Ticket ৳ 10</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-3.5 pt-1">
+<a class="flex-1 min-h-[44px] bg-primary text-on-primary rounded-lg flex items-center justify-center gap-1.5 font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" href="tel:+880821713667">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>+880 821 713667</span>
+</a>
+<button class="px-3.5 min-h-[44px] bg-surface-container text-primary rounded-lg flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+<span>Directions</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Interactive Community Guidance Banner -->
+<div class="px-margin-mobile pt-5">
+<div class="bg-gradient-to-br from-surface-container to-surface-container-high rounded-xl p-4 flex items-center gap-3 shadow-sm">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">diversity_1</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-primary leading-tight">Know Your Carrier Status</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Pre-marital screening stops thalassemia propagation. Counseling is free at accredited public centers.</p>
+</div>
+</div>
+</div>
+<!-- Emergency & Hotline Fast-Access Footer Block -->
+<div class="px-margin-mobile pt-5">
+<div class="bg-primary text-on-primary rounded-xl p-4 flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">support_agent</span>
+<span class="font-title-md text-title-md font-semibold text-on-primary">Emergency &amp; Hotline Fast-Access</span>
+</div>
+<span class="bg-secondary text-on-secondary px-2 py-0.5 rounded-full font-label-sm text-label-sm">24/7 Available</span>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Shastho Batayon -->
+<a class="bg-surface-container-lowest/10 hover:bg-surface-container-lowest/15 p-3 rounded-lg flex items-center justify-between transition-colors" href="tel:16263">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shrink-0 font-bold font-label-md text-label-md">
+              16263
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-primary truncate">Shastho Batayon</span>
+<span class="font-body-sm text-body-sm text-surface-container-high">National Public Health Helpline</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed shrink-0">call</span>
+</a>
+<!-- Blood Donation & Registry Alliance -->
+<a class="bg-surface-container-lowest/10 hover:bg-surface-container-lowest/15 p-3 rounded-lg flex items-center justify-between transition-colors" href="tel:01700000000">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">water_drop</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-primary truncate">Blood Donation &amp; Registry Alliance</span>
+<span class="font-body-sm text-body-sm text-surface-container-high">Emergency Donor Coordination: 01700-000000</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed shrink-0">emergency</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Legal & Transparency Disclaimer -->
+<div class="px-margin-mobile pt-4 pb-2">
+<div class="p-3 rounded-lg bg-surface-container-low text-on-surface-variant flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0 mt-0.5">policy</span>
+<p class="font-label-sm text-label-sm leading-normal">
+<strong class="font-semibold text-on-surface">Legal Disclaimer:</strong> All listings are non-commercial public health and accredited non-profit facilities. HHD Intelligence does not receive referral fees or commercial compensation. Verified according to Directorate General of Health Services (DGHS) public registers.
+      </p>
+</div>
+</div>
+</div>
+<script>
+  (function initDirectoryInteractions() {
+    const divisionDropdown = document.getElementById('division-dropdown');
+    const districtDropdown = document.getElementById('district-dropdown');
+    const serviceDropdown = document.getElementById('service-dropdown');
+
+    const selectedDivisionText = document.getElementById('selected-division');
+    const selectedDistrictText = document.getElementById('selected-district');
+    const selectedServiceText = document.getElementById('selected-service');
+
+    const resetBtn = document.getElementById('reset-filter-btn');
+    const viewListBtn = document.getElementById('view-list-btn');
+    const viewMapBtn = document.getElementById('view-map-btn');
+    const mapPanel = document.getElementById('map-panel');
+    const facilityList = document.getElementById('facility-list');
+
+    if (divisionDropdown && selectedDivisionText) {
+      divisionDropdown.addEventListener('change', (e) => {
+        selectedDivisionText.textContent = e.target.options[e.target.selectedIndex].text;
+      });
+    }
+
+    if (districtDropdown && selectedDistrictText) {
+      districtDropdown.addEventListener('change', (e) => {
+        selectedDistrictText.textContent = e.target.options[e.target.selectedIndex].text;
+      });
+    }
+
+    if (serviceDropdown && selectedServiceText) {
+      serviceDropdown.addEventListener('change', (e) => {
+        selectedServiceText.textContent = e.target.options[e.target.selectedIndex].text;
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (divisionDropdown) {
+          divisionDropdown.value = 'Dhaka';
+          selectedDivisionText.textContent = 'Dhaka Division';
+        }
+        if (districtDropdown) {
+          districtDropdown.value = 'All';
+          selectedDistrictText.textContent = 'All Districts';
+        }
+        if (serviceDropdown) {
+          serviceDropdown.value = 'HPLC';
+          selectedServiceText.textContent = 'HPLC Thalassemia Screening';
+        }
+      });
+    }
+
+    // Toggle between list view and map view
+    if (viewMapBtn && viewListBtn && mapPanel && facilityList) {
+      viewMapBtn.addEventListener('click', () => {
+        mapPanel.classList.remove('hidden');
+        viewMapBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        viewMapBtn.classList.remove('text-on-surface-variant');
+
+        viewListBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        viewListBtn.classList.add('text-on-surface-variant');
+      });
+
+      viewListBtn.addEventListener('click', () => {
+        mapPanel.classList.add('hidden');
+        viewListBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        viewListBtn.classList.remove('text-on-surface-variant');
+
+        viewMapBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        viewMapBtn.classList.add('text-on-surface-variant');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="ncd-hub" href="#"><span class="material-symbols-outlined text-[24px]">shield</span><span class="font-label-sm text-label-sm mt-0.5">NCD Hub</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="thalassemia" href="#"><span class="material-symbols-outlined text-[24px]">genetics</span><span class="font-label-sm text-label-sm mt-0.5">Genetics</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[24px]">bar_chart_4_bars</span><span class="font-label-sm text-label-sm mt-0.5">Impact</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-14 transition-colors text-secondary font-semibold" data-path="bd-access" href="#"><span class="material-symbols-outlined text-[24px]">distance</span><span class="font-label-sm text-label-sm mt-0.5">BD Access</span></a></div></nav></body></html>

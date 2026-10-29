@@ -1,0 +1,6 @@
+{
+  "name": "HHD Intelligence — Public Health & Genetic Health Platform",
+  "description": "Educational public health intelligence, non-communicable disease prevention, genetic risk & thalassemia carrier literacy, health economics dashboard, and verified 64-district health access directory for Bangladesh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

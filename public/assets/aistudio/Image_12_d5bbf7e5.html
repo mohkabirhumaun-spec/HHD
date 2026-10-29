@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "secondary-fixed-dim": "#6bd8cb",
+        "surface-container-high": "#dee8ff",
+        "on-surface-variant": "#43474d",
+        "tertiary": "#1c0047",
+        "primary-container": "#102a43",
+        "on-primary-container": "#7a92b0",
+        "on-error-container": "#93000a",
+        "surface-bright": "#f9f9ff",
+        "on-primary": "#ffffff",
+        "surface-variant": "#d8e3fb",
+        "on-secondary-fixed": "#00201d",
+        "primary": "#00152a",
+        "surface-container": "#e7eeff",
+        "surface-tint": "#49607c",
+        "outline-variant": "#c3c6ce",
+        "on-secondary": "#ffffff",
+        "primary-fixed-dim": "#b0c9e8",
+        "on-surface": "#111c2d",
+        "on-secondary-fixed-variant": "#005049",
+        "secondary-container": "#86f2e4",
+        "error-container": "#ffdad6",
+        "on-primary-fixed-variant": "#314863",
+        "error": "#ba1a1a",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-highest": "#d8e3fb",
+        "tertiary-container": "#35007a",
+        "on-tertiary-container": "#a375ff",
+        "on-background": "#111c2d",
+        "surface": "#f9f9ff",
+        "on-tertiary-fixed-variant": "#5a00c6",
+        "secondary-fixed": "#89f5e7",
+        "background": "#f9f9ff",
+        "tertiary-fixed-dim": "#d2bbff",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed": "#25005a",
+        "tertiary-fixed": "#eaddff",
+        "on-secondary-container": "#006f66",
+        "primary-fixed": "#d1e4ff",
+        "on-error": "#ffffff",
+        "secondary": "#006a61",
+        "on-primary-fixed": "#011d35",
+        "inverse-surface": "#263143",
+        "surface-container-low": "#f0f3ff",
+        "inverse-on-surface": "#ecf1ff",
+        "inverse-primary": "#b0c9e8",
+        "surface-dim": "#cfdaf2",
+        "outline": "#74777e"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "gutter-mobile": "1rem",
+        "space-xl": "2.5rem",
+        "space-lg": "1.5rem",
+        "margin": "2rem",
+        "space-md": "1rem",
+        "gutter": "1.5rem",
+        "space-sm": "0.5rem",
+        "margin-mobile": "1rem",
+        "space-xs": "0.25rem"
+      },
+      "fontFamily": {
+        "display-lg-mobile": ["Plus Jakarta Sans"],
+        "body-lg": ["Inter"],
+        "title-md": ["Plus Jakarta Sans"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "label-sm": ["Inter"],
+        "body-sm": ["Inter"],
+        "headline-lg-mobile": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "body-md": ["Inter"],
+        "label-md": ["Inter"],
+        "display-lg": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "display-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+        "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+        "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "headline-lg-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}],
+        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+        "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+        "display-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(16,42,67,0.06)]"><div class="w-full h-20 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">shield_with_heart</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-primary tracking-tight font-bold">HHD Intelligence</span><span class="px-space-xs py-[2px] rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm border border-outline-variant/30">National Node</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Public Health & Genetic Health Platform</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-[4px] rounded-full bg-surface-container-lowest shadow-sm border border-outline-variant/20"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-secondary font-medium">DGHS Live Data Feed</span><span class="font-label-sm text-label-sm text-outline-variant">•</span><span class="font-label-sm text-label-sm text-on-surface-variant">Geo-Sync: 64 Districts Active</span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-space-xs rounded-xl bg-surface-container-low" data-active-classes="bg-primary text-on-primary rounded-lg font-title-md"><a aria-current="page" class="px-space-sm py-space-xs transition-all bg-primary text-on-primary rounded-lg font-title-md" data-path="intelligence-dashboard" href="#">Intelligence Dashboard</a><a class="px-space-sm py-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all" data-path="preventive-hub" href="#">Preventive Hub</a><a class="px-space-sm py-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all" data-path="genetics-and-thalassemia" href="#">Genetics & Thalassemia</a><a class="px-space-sm py-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all" data-path="research-and-evidence" href="#">Research & Evidence</a><a class="px-space-sm py-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all" data-path="field-operations" href="#">Field Operations</a><a class="px-space-sm py-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all" data-path="bangladesh-access" href="#">Bangladesh Access</a></nav><div class="flex items-center gap-space-sm flex-shrink-0"><div class="hidden 2xl:flex items-center w-56 h-10 px-space-sm rounded-lg bg-surface-container-lowest border border-outline-variant/40 shadow-sm"><span class="material-symbols-outlined text-outline text-[18px] mr-space-xs">search</span><span class="flex-1 font-body-sm text-body-sm text-outline">Epidemiology lookup...</span><kbd class="px-space-xs py-[2px] rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">⌘K</kbd></div><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-error-container text-on-error-container font-label-md text-label-md hover:bg-error hover:text-on-error transition-all shadow-sm" href="tel:16263"><span class="material-symbols-outlined text-[16px]">call</span><span class="hidden sm:inline font-semibold">16263 Shastho Batayon</span></a><div class="flex items-center p-[2px] rounded-full bg-surface-container border border-outline-variant/30 text-on-surface-variant font-label-sm text-label-sm"><span class="px-space-xs py-[2px] rounded-full bg-primary text-on-primary font-semibold">EN</span><span class="px-space-xs py-[2px] text-on-surface-variant hover:text-on-surface cursor-pointer">বাংলা</span></div><div class="relative flex items-center gap-space-xs pl-space-xs"><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface"></span></div></div></div></div></header><aside class="fixed left-0 top-20 bottom-0 w-64 bg-surface-container-lowest border-r border-outline-variant/20 z-40 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(16,42,67,0.02)]"><div class="px-space-md flex flex-col gap-space-md"><div class="px-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Operational Modules</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="intelligence-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">National Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="thalassemia-registry" href="#"><span class="material-symbols-outlined text-[20px]">genetics</span><span class="font-body-md text-body-md">Genetic Registry</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="field-operations" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-body-md text-body-md">Division Telemetry</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="epidemiological-alerts" href="#"><span class="material-symbols-outlined text-[20px]">crisis_alert</span><span class="font-body-md text-body-md">Outbreak Alerts</span></a></nav></div><div class="px-space-md flex flex-col gap-space-sm border-t border-outline-variant/20 pt-space-md"><div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Clinical Node Status</span><span class="w-2 h-2 rounded-full bg-secondary"></span></div><span class="font-body-sm text-body-sm text-on-surface font-semibold">BSMMU & IEDCR Linked</span></div></div></aside><div class="pl-64"><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Analytical Sub-bar & Filter Architecture -->
+<div class="w-full bg-surface-container-lowest px-margin py-space-md shadow-sm">
+<div class="max-w-[1400px] mx-auto flex flex-col gap-space-md">
+<!-- Upper Tier: Breadcrumb, Live Feeds, View Toggle, Export Actions -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">HHD Portal</span>
+<span class="font-label-sm text-label-sm text-outline-variant">/</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Analytics & Registry</span>
+<span class="font-label-sm text-label-sm text-outline-variant">/</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Intelligence & Economics</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-xs px-space-sm py-[2px] rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-semibold">DGHS Verified Pipeline</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-[2px]">
+<span class="material-symbols-outlined text-[14px] text-outline">sync</span>
+              Telemetry Synced 12 mins ago
+            </span>
+<span class="font-label-sm text-label-sm text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">64 Districts Active (300 Upazila Nodes)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- View Switcher -->
+<div class="flex items-center p-1 rounded-lg bg-surface-container-low" id="viewModeGroup">
+<button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" type="button">Public View</button>
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-sm" type="button">Epidemiological & Economics</button>
+<button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" type="button">Telemetry Stream</button>
+</div>
+<div class="h-6 w-px bg-surface-container"></div>
+<!-- Export Actions -->
+<button class="flex items-center gap-space-xs px-space-sm py-[7px] rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Policy Brief (PDF)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-[7px] rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Aggregate CSV (CC-BY 4.0)</span>
+</button>
+</div>
+</div>
+<!-- Lower Tier: Granular Dimension Filters -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">tune</span>
+<span class="font-semibold text-primary">FILTERS:</span>
+</div>
+<!-- Division Selector -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md pl-3 pr-8 py-1.5 rounded-lg focus:outline-none cursor-pointer">
+<option value="all">All 8 Divisions (National Aggregate)</option>
+<option value="dhaka">Dhaka Division (Surveillance Heavy)</option>
+<option value="chattogram">Chattogram Division (Hills & Coastal)</option>
+<option value="rajshahi">Rajshahi Division (North-West Hub)</option>
+<option value="khulna">Khulna Division (Sundarbans Delta)</option>
+<option value="sylhet">Sylhet Division (Tea Estate Sentinel)</option>
+<option value="rangpur">Rangpur Division (Rural High-Yield)</option>
+<option value="barishal">Barishal Division (Southern Coastal)</option>
+<option value="mymensingh">Mymensingh Division (Border Belt)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2 top-2 text-[16px] text-outline">arrow_drop_down</span>
+</div>
+<!-- Time Horizon Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md pl-3 pr-8 py-1.5 rounded-lg focus:outline-none cursor-pointer">
+<option>Q1 2025 (Current Field Cycle)</option>
+<option>2024 Annual Surveillance Review</option>
+<option>5-Year Longitudinal Model (2020-2025)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2 top-2 text-[16px] text-outline">calendar_month</span>
+</div>
+<!-- Intervention Topic Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md pl-3 pr-8 py-1.5 rounded-lg focus:outline-none cursor-pointer">
+<option>All Integrated Cohorts (Genetic & NCD)</option>
+<option>Beta-Thalassemia & HbE Trait Screening</option>
+<option>Hypertension & Salt Reduction Trial</option>
+<option>Type 2 Diabetes Field Biomarkers</option>
+<option>VIA Cervical Cancer Early Detection</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2 top-2 text-[16px] text-outline">filter_alt</span>
+</div>
+<div class="ml-auto flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span>Active Registry Cohort ID:</span>
+<span class="font-mono text-primary font-semibold">BD-NAT-2025-V4</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Dashboard Canvas -->
+<div class="w-full px-margin py-space-lg">
+<div class="max-w-[1400px] mx-auto flex flex-col gap-space-lg">
+<!-- SECTION 2: Top Analytical Metric KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1: Prevention Reach -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-secondary"></div>
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Total Population Reached</span>
+<span class="px-space-xs py-[2px] rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-[2px]">
+<span class="material-symbols-outlined text-[13px]">trending_up</span>
+                +14.2% YoY
+              </span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-lg text-display-lg text-primary tracking-tight font-extrabold">1,420,890</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Direct preventative assessments across 64 Upazila field hubs</p>
+</div>
+<!-- Sparkline representation -->
+<div class="mt-space-md pt-space-xs flex items-end justify-between gap-1 h-8">
+<div class="flex-1 bg-surface-container rounded-t h-[40%]"></div>
+<div class="flex-1 bg-surface-container rounded-t h-[55%]"></div>
+<div class="flex-1 bg-surface-container rounded-t h-[48%]"></div>
+<div class="flex-1 bg-surface-container rounded-t h-[65%]"></div>
+<div class="flex-1 bg-surface-container rounded-t h-[72%]"></div>
+<div class="flex-1 bg-surface-container rounded-t h-[68%]"></div>
+<div class="flex-1 bg-surface-container rounded-t h-[82%]"></div>
+<div class="flex-1 bg-secondary rounded-t h-[95%]"></div>
+</div>
+</div>
+<!-- Metric 2: HPLC Carrier Screens -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">HPLC Carrier Screens</span>
+<span class="px-space-xs py-[2px] rounded-full bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-bold">
+                Bio-Rad D-10 Certified
+              </span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-lg text-display-lg text-primary tracking-tight font-extrabold">18,540</span>
+<span class="font-label-md text-label-md text-tertiary font-bold">11.2% Trait Yield</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Pre-marital youth & family sentinel cascades completed</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> HbE: 62%
+            </span>
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> β-Thal: 31%
+            </span>
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-outline"></span> Other: 7%
+            </span>
+</div>
+</div>
+<!-- Metric 3: Cost Per Citizen Reached -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Cost Per Citizen Reached</span>
+<span class="px-space-xs py-[2px] rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">
+                WHO Ceiling: ৳ 350
+              </span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-lg text-display-lg text-primary tracking-tight font-extrabold">৳ 42.50</span>
+<span class="font-label-md text-label-md text-secondary font-bold">~ $0.38 USD</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Highly cost-effective index vs South Asia public benchmarks</p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 14%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1 font-label-sm text-label-sm text-on-surface-variant">
+<span>Optimized Marginal Cost</span>
+<span class="font-semibold text-secondary">88% Under Cap</span>
+</div>
+</div>
+</div>
+<!-- Metric 4: DALYs Averted -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-secondary-fixed-dim"></div>
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Disability-Adjusted Life Yrs</span>
+<span class="px-space-xs py-[2px] rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+                WHO Tier-1 Impact
+              </span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-lg text-display-lg text-primary tracking-tight font-extrabold">3,840</span>
+<span class="font-title-md text-title-md text-primary font-semibold">DALYs</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Cumulative lifetime burden averted through early intervention</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Thalassemia: 2,410</span>
+<span class="text-on-surface-variant">Hypertension: 1,430</span>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Main Analytical Multi-Column Core -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Epidemiology Surveillance & Health Economics (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- 3.1 Geographic Surveillance & Carrier Density Index -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">public</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Bangladesh Carrier Density & Screening Yield Index</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">District-level prevalence derived from 18,540 capillary HPLC electrophoresis assays</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-1 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface font-semibold">64 Districts Filtered</span>
+<button class="px-space-xs py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+                  Adjust Stratification
+                </button>
+</div>
+</div>
+<!-- Division Comparison Histogram / Metrics Bar -->
+<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col p-space-xs bg-surface-container-lowest rounded">
+<span class="font-label-sm text-label-sm text-outline">Dhaka</span>
+<span class="font-title-md text-title-md text-primary font-bold">34%</span>
+<div class="w-full bg-surface-container h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 34%;"></div>
+</div>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container-lowest rounded">
+<span class="font-label-sm text-label-sm text-outline">Chattogram</span>
+<span class="font-title-md text-title-md text-primary font-bold">22%</span>
+<div class="w-full bg-surface-container h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 22%;"></div>
+</div>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container-lowest rounded">
+<span class="font-label-sm text-label-sm text-outline">Rajshahi</span>
+<span class="font-title-md text-title-md text-primary font-bold">15%</span>
+<div class="w-full bg-surface-container h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 15%;"></div>
+</div>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container-lowest rounded">
+<span class="font-label-sm text-label-sm text-outline">Khulna</span>
+<span class="font-title-md text-title-md text-primary font-bold">11%</span>
+<div class="w-full bg-surface-container h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 11%;"></div>
+</div>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container-lowest rounded">
+<span class="font-label-sm text-label-sm text-outline">Sylhet</span>
+<span class="font-title-md text-title-md text-primary font-bold">8%</span>
+<div class="w-full bg-surface-container h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 8%;"></div>
+</div>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container-lowest rounded">
+<span class="font-label-sm text-label-sm text-outline">Rangpur</span>
+<span class="font-title-md text-title-md text-primary font-bold">6%</span>
+<div class="w-full bg-surface-container h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 6%;"></div>
+</div>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container-lowest rounded">
+<span class="font-label-sm text-label-sm text-outline">Barishal</span>
+<span class="font-title-md text-title-md text-primary font-bold">4%</span>
+<div class="w-full bg-surface-container h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 4%;"></div>
+</div>
+</div>
+</div>
+<!-- Map View + Hotspot Clusters Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<!-- Location Visual Viewport -->
+<div class="md:col-span-7 relative h-72 rounded-xl overflow-hidden bg-surface-container shadow-inner">
+<div class="w-full h-full bg-cover bg-center" data-location="Dhaka, Bangladesh" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZysebTGeBr4mNwnOZNmiEXSzHUyFlIy_a5GpQA6Oz6VhFs4TNnLPYh9bhs57gGapnP17V09O4_ldxfe5L0kTNLggY3AjOcknnA5ekrnl_cEece5HRs7_hbMUuKeVDLvTmjbWgwN0UveYj3pAj2iHHBDrNfzMxGRpQz_9d_Ix7pddh1XZ7gyMn9vmE1mlWxo4NHEwZ4DqZibSil5Otmeh-IwIWkxeW7H4PI9cjUr0fkdRstUgU1NhU')"></div>
+<!-- Map Overlay Pins -->
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<div class="absolute top-4 left-4 flex flex-col gap-1.5">
+<span class="px-space-xs py-1 rounded bg-surface-container-lowest/95 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Cluster 1: Dhaka Hub (High Flow)
+                  </span>
+<span class="px-space-xs py-1 rounded bg-surface-container-lowest/95 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Cluster 2: Rangpur Rural Cascade
+                  </span>
+<span class="px-space-xs py-1 rounded bg-surface-container-lowest/95 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Cluster 3: Sylhet Tea Gardens
+                  </span>
+</div>
+<div class="absolute bottom-3 right-3 bg-primary-container text-on-primary px-space-sm py-1 rounded-lg text-label-sm font-label-sm shadow-md">
+                  Active Real-Time GIS Layer
+                </div>
+</div>
+<!-- Hemoglobin Variant Distribution Breakdown -->
+<div class="md:col-span-5 flex flex-col justify-between h-72 bg-surface-container-low p-space-md rounded-xl">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Variant Molecular Spectrum</span>
+<h3 class="font-title-md text-title-md text-primary font-bold mt-1">Hemoglobinopathy Fractions</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Confirmed via cation-exchange HPLC with HbA2 & HbF elution bands.</p>
+</div>
+<!-- Visual Stacked Bars -->
+<div class="flex flex-col gap-space-sm my-auto">
+<div>
+<div class="flex justify-between items-center text-label-sm font-label-sm mb-1">
+<span class="text-primary font-semibold">HbE Heterozygote (Trait)</span>
+<span class="text-tertiary font-bold">62% (1,288 cases)</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 62%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center text-label-sm font-label-sm mb-1">
+<span class="text-primary font-semibold">Beta-Thalassemia Minor</span>
+<span class="text-secondary font-bold">31% (644 cases)</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 31%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center text-label-sm font-label-sm mb-1">
+<span class="text-primary font-semibold">Other Hemoglobinopathies</span>
+<span class="text-outline font-bold">7% (145 cases)</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 7%;"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Compound Risk (HbE / β-Thal):</span>
+<span class="text-error font-bold">4.2% in matched couples</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3.2 Health Economics & Lifetime Burden Model (ROI Panel) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">payments</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Health Economics: Cost-Effectiveness & Lifetime Burden Dividend</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Markov health decision-tree analysis modeling pre-marital cascade screening vs reactive lifetime transfusion treatment.</p>
+</div>
+<!-- Big Callout Hero Banner -->
+<div class="p-space-lg rounded-xl bg-primary-container text-on-primary shadow-sm relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs z-10 max-w-xl">
+<span class="px-space-xs py-[2px] rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold w-fit">
+                  NATIONAL ECONOMIC DIVIDEND
+                </span>
+<h3 class="font-headline-lg text-headline-lg font-extrabold tracking-tight text-surface-bright">
+                  18x Lifetime Economic Return
+                </h3>
+<p class="font-body-md text-body-md text-on-primary-container">
+                  For every <strong class="text-white">৳ 1 invested</strong> in pre-marital youth HPLC carrier screening and genetic counseling, Bangladesh's healthcare ecosystem saves <strong class="text-white">৳ 18 in catastrophic lifetime healthcare expenditures</strong> and lost productivity.
+                </p>
+</div>
+<!-- High Contrast Metric Dial / Counter -->
+<div class="flex flex-col items-center justify-center p-space-md rounded-xl bg-primary/40 backdrop-blur-md z-10 flex-shrink-0 min-w-[200px]">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed font-semibold">Averted Poverty Rate</span>
+<span class="font-display-lg text-display-lg text-secondary-fixed font-extrabold tracking-tight mt-1">91.4%</span>
+<span class="font-label-sm text-label-sm text-surface-container-high mt-1 text-center">Protects families from debt bankruptcy</span>
+</div>
+</div>
+<!-- Visual Cost Comparison Cards Breakdown -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-xs">
+<!-- Preventative Screening Protocol Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-space-xs py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+                      PROACTIVE PREVENTATIVE MODEL
+                    </span>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-bold">Pre-Marital Screening & Counseling</h4>
+<div class="mt-space-sm flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">~ ৳ 2,500</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ couple (one-time investment)</span>
+</div>
+<ul class="mt-space-sm flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                      Bio-Rad automated HPLC testing for both partners
+                    </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                      Confirmatory Sanger/PCR validation at tertiary hubs
+                    </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                      Certified bilingual genetic counseling session
+                    </li>
+</ul>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest p-space-xs rounded font-label-sm text-label-sm text-secondary font-semibold flex items-center justify-between">
+<span>Economic Burden Score:</span>
+<span>Extremely High Affordability</span>
+</div>
+</div>
+<!-- Reactive Lifetime Care Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-space-xs py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+                      REACTIVE LIFETIME BURDEN
+                    </span>
+<span class="material-symbols-outlined text-error text-[20px]">warning</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-bold">Thalassemia Major Lifetime Clinical Care</h4>
+<div class="mt-space-sm flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-bold text-error">৳ 350,000+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ patient annually</span>
+</div>
+<ul class="mt-space-sm flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[16px]">cancel</span>
+                      12 to 24 transfusions per year (NAT-screened blood cost)
+                    </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[16px]">cancel</span>
+                      Continuous oral Deferasirox iron chelation therapy
+                    </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[16px]">cancel</span>
+                      Cardio-hepatic T2* MRI surveillance & endocrinopathy care
+                    </li>
+</ul>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest p-space-xs rounded font-label-sm text-label-sm text-error font-semibold flex items-center justify-between">
+<span>Lifetime Total Cost:</span>
+<span>৳ 8.5M - ৳ 14M per affected life</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: District Telemetry & Research Evidence (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- 3.3 Live District Operations Telemetry -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">rss_feed</span>
+<h3 class="font-title-md text-title-md text-primary font-bold">Live District Telemetry</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span> Live Link
+              </span>
+</div>
+<!-- Feed Stream -->
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1: Rangpur -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold">RANGPUR RURAL UPAZILA</span>
+<span class="font-label-sm text-label-sm text-outline">8m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary font-medium leading-snug">
+                  Mobile diagnostic van completed screening cohort: <strong>342 college students</strong> with HPLC analyzer. 38 Beta-Thalassemia traits identified; immediate genetic pre-counseling initiated.
+                </p>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">local_hospital</span>
+<span>Upazila Health Complex #4</span>
+</div>
+</div>
+<!-- Item 2: Sylhet -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-bold">SYLHET (SREEMANGAL)</span>
+<span class="font-label-sm text-label-sm text-outline">24m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary font-medium leading-snug">
+<strong>1,120 tea garden laborer families</strong> enrolled in bilingual (Bengali/Sadri dialect) NCD dietary hypertension and salt reduction field protocol.
+                </p>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">volunteer_activism</span>
+<span>Field Agent: Sabina Yasmin (Worker #42)</span>
+</div>
+</div>
+<!-- Item 3: BSMMU -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">BSMMU HEMATOLOGY LAB</span>
+<span class="font-label-sm text-label-sm text-outline">1h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary font-medium leading-snug">
+                  Batch 482 molecular confirmatory PCR assays completed. <strong>100% concordance</strong> confirmed with district automated capillary electrophoresis results.
+                </p>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">biotech</span>
+<span>Tertiary Quality Assurance Node</span>
+</div>
+</div>
+<!-- Item 4: Chattogram -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold">CHATTOGRAM HILL TRACTS</span>
+<span class="font-label-sm text-label-sm text-outline">2h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary font-medium leading-snug">
+                  Rangamati health team dispatched cold-chain capillary collection kits for 12 indigenous community clinics.
+                </p>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">ac_unit</span>
+<span>Cold Chain Telemetry: 4.2°C Stable</span>
+</div>
+</div>
+</div>
+<button class="w-full py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-1">
+<span>View Full Real-Time Ops Log</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- 3.4 Policy & Research Evidence Briefs -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+<h3 class="font-title-md text-title-md text-primary font-bold">Policy & Research Briefs</h3>
+</div>
+<!-- Downloadable Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-semibold">PEER-REVIEWED</span>
+<span class="font-label-sm text-label-sm text-outline">Q1 2025</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-bold leading-tight">
+                Economic Burden & Cost-Effectiveness of Nationwide HPLC Screening in Bangladesh
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Published in collaboration with BSMMU Hematology, IEDCR & Harvard T.H. Chan.
+              </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline font-mono">doi:10.1016/j.jiph.2025</span>
+<a class="text-secondary hover:text-on-secondary-container font-label-md text-label-md font-bold flex items-center gap-1" href="#">
+<span>PDF (2.4 MB)</span>
+<span class="material-symbols-outlined text-[16px]">download</span>
+</a>
+</div>
+</div>
+<!-- Downloadable Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">DGHS PROTOCOL</span>
+<span class="font-label-sm text-label-sm text-outline">Feb 2025</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-bold leading-tight">
+                National VIA Cervical Cancer Upazila Scaling Protocol & Digital Registry
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Standard operating manual for community clinic midwives and health inspectors.
+              </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline font-mono">DGHS-NCD-MAN-09</span>
+<a class="text-secondary hover:text-on-secondary-container font-label-md text-label-md font-bold flex items-center gap-1" href="#">
+<span>PDF (1.8 MB)</span>
+<span class="material-symbols-outlined text-[16px]">download</span>
+</a>
+</div>
+</div>
+<!-- Clinical Node Trust Badge -->
+<div class="p-space-xs rounded bg-surface-container flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">BSMMU & IEDCR Certified</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">National Ethics Clearance BMRC/2024/77</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: Scientific Governance & Methodology Footer Panel -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">policy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm font-bold text-primary">SCIENTIFIC GOVERNANCE & OPEN DATA:</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">WHO NCD 2030 Target Aligned</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm">DGHS Bangladesh Compliant</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              All epidemiological indices are derived via privacy-preserving de-identified clinical records under CC-BY 4.0 Open Public Health License. Individual patient records are salted and SHA-256 encrypted at the Upazila node.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md transition-all">
+            Full Methodology Specs
+          </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all">
+            Request API Key
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

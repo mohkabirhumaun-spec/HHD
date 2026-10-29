@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "on-background": "#111c2d", "tertiary-fixed-dim": "#d2bbff", "on-error": "#ffffff", "on-primary-container": "#7a92b0", "secondary-fixed-dim": "#6bd8cb", "error": "#ba1a1a", "on-error-container": "#93000a", "inverse-primary": "#b0c9e8", "surface-container-high": "#dee8ff", "tertiary-container": "#35007a", "primary-fixed-dim": "#b0c9e8", "on-secondary-fixed": "#00201d", "outline": "#74777e", "surface-container": "#e7eeff", "on-surface-variant": "#43474d", "background": "#f9f9ff", "surface-container-low": "#f0f3ff", "primary": "#00152a", "outline-variant": "#c3c6ce", "surface-dim": "#cfdaf2", "on-tertiary-container": "#a375ff", "on-secondary-fixed-variant": "#005049", "surface-variant": "#d8e3fb", "secondary": "#006a61", "on-tertiary-fixed": "#25005a", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#314863", "primary-fixed": "#d1e4ff", "inverse-surface": "#263143", "on-tertiary-fixed-variant": "#5a00c6", "surface-bright": "#f9f9ff", "tertiary-fixed": "#eaddff", "on-secondary-container": "#006f66", "on-primary": "#ffffff", "secondary-fixed": "#89f5e7", "surface-tint": "#49607c", "primary-container": "#102a43", "surface": "#f9f9ff", "surface-container-highest": "#d8e3fb", "on-surface": "#111c2d", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "tertiary": "#1c0047", "inverse-on-surface": "#ecf1ff", "on-primary-fixed": "#011d35", "secondary-container": "#86f2e4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1rem", "space-sm": "0.5rem", "margin": "2rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem" }, "fontFamily": { "title-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "display-lg": ["Plus Jakarta Sans"] }, "fontSize": { "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="bg-surface-container-low px-margin-mobile py-space-xs flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs text-on-surface-variant overflow-hidden"><span class="material-symbols-outlined text-[14px] text-secondary shrink-0">info</span><p class="font-label-sm text-label-sm truncate">Educational &amp; Public Health Intelligence platform. Not for acute clinical emergency.</p></div><a class="shrink-0 inline-flex items-center gap-1 bg-secondary-container text-on-secondary-fixed px-space-sm py-0.5 rounded-full font-label-sm text-label-sm hover:opacity-90 transition-opacity" href="tel:16263"><span class="material-symbols-outlined text-[13px] text-secondary">support_agent</span><span class="hidden xs:inline">16263</span><span>Batayon</span></a></div><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm shrink-0"><img alt="HHD Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_8e34yvVGR9vVF7TCF8GcEFjAgRpjWaTtumehbY6EGf7PrBZitkBKkPheW2jCACJzdumDGSoyAiG6JlQh4dhQB5HjXsp1871NXrJ7NY6HLCh1ccmnRJEIi5yn6TfTBxCfVeJa6kRTbG9BDDB6r_Ks4iGmv86O7U5BTVY0r0A4JXlt1McVsWws86O5yy2-nrVhPLTZa_Qa03Y6OW_bQ1KUfcK0DVd32vmrP8AsfTyby8jlGxaYenehVKc"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">HHD</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Intelligence</span></div></div><div class="flex items-center gap-space-sm"><div class="inline-flex items-center p-0.5 rounded-full bg-surface-container"><span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary">EN</span><span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">বাংলা</span></div><button aria-label="Search Intelligence" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="relative shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsA7K8Z4_LdQz1l41LtFcWDD0t8YtXOGcJ_wCDN4j2zKU8TSiAkddMTvtEicxghgKmkQH6qBSaUVt3cKEzG7LauP8yqkU5XwlzYSB8WgQ7RgyZdCMJHzLzUNzTbdIn3kzvvQ-4fJmMltaUOla1YQkw546W1apwuuOpGyihq1tx_bUMm14Imt5-cVtcVJKuNKvdkRT9N3A9s8BRfD9EjOZMc3tKKGxZVEYKTikAMgcMO-zJIxqw7toN"/><span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-secondary text-on-secondary rounded-full flex items-center justify-center ring-2 ring-surface text-[9px]"><span class="material-symbols-outlined text-[10px]">verified</span></span></div></div></div><nav aria-label="Contextual Topics" class="flex items-center gap-space-md px-margin-mobile pb-space-sm overflow-x-auto no-scrollbar"><a class="font-label-md text-label-md text-on-surface font-semibold whitespace-nowrap" href="#">All Feeds</a><a class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hover:text-on-surface" href="#">Research &amp; Evidence</a><a class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hover:text-on-surface" href="#">Field Ops</a><a class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hover:text-on-surface" href="#">Expert Portal</a><a class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hover:text-on-surface" href="#">Data Lab</a></nav></div></header><main class="flex flex-col relative w-full pt-32 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Urgent Educational Alert Banner -->
+<aside aria-label="National Health Campaign" class="w-full bg-secondary text-on-secondary px-margin-mobile py-2.5 transition-all">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2 overflow-hidden">
+<span class="flex h-2 w-2 relative shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary-container"></span>
+</span>
+<p class="font-label-sm text-label-sm truncate tracking-tight">
+<span class="font-semibold text-secondary-fixed">National Campaign 2025:</span> Bangladesh Thalassemia Prevention Week • Carrier Screening Guidelines Active
+        </p>
+</div>
+<a class="shrink-0 flex items-center gap-0.5 text-secondary-fixed font-label-sm text-label-sm font-semibold hover:underline" href="#thalassemia-protocol">
+<span>Protocol</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</aside>
+<!-- Hero Content Segment -->
+<section class="px-margin-mobile pt-space-lg pb-space-md flex flex-col gap-space-md">
+<!-- Trust Pill Badge -->
+<div class="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[15px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Public Health Intelligence • Bangladesh</span>
+</div>
+<!-- Main Value Statement -->
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight leading-tight">
+        Prevent Today. <br/>
+<span class="text-secondary">Protect Tomorrow.</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+        Bridging evidence-based prevention, genetic risk intelligence, community frontline action, and population health economics.
+      </p>
+</div>
+<!-- Mobile Action Buttons Matrix -->
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<a class="inline-flex items-center gap-1.5 bg-secondary text-on-secondary px-3.5 py-2.5 rounded-lg font-label-md text-label-md shadow-sm hover:opacity-95 active:scale-95 transition-transform" href="#ncd-hub">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span>NCD Prevention</span>
+</a>
+<a class="inline-flex items-center gap-1.5 bg-tertiary-container text-on-tertiary-container px-3.5 py-2.5 rounded-lg font-label-md text-label-md shadow-sm hover:opacity-95 active:scale-95 transition-transform" href="#genetics">
+<span class="material-symbols-outlined text-[18px]">genetics</span>
+<span>Genetics &amp; Carrier</span>
+</a>
+<a class="inline-flex items-center gap-1.5 bg-primary-container text-on-primary px-3.5 py-2.5 rounded-lg font-label-md text-label-md shadow-sm hover:opacity-95 active:scale-95 transition-transform" href="#analytics">
+<span class="material-symbols-outlined text-[18px]">ssid_chart</span>
+<span>Impact Lab</span>
+</a>
+</div>
+</section>
+<!-- Interactive Quick Stats Ribbon -->
+<section aria-label="National Key Performance Indicators" class="px-margin-mobile py-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">analytics</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">National Coverage Data</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded-full">Live Feed</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary font-bold">1.4M+</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">arrow_upward</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Citizens Educated</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary font-bold">64 / 64</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">map</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Districts Mapped</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-tertiary-container font-bold">18,500+</span>
+<span class="material-symbols-outlined text-tertiary-container text-[16px]">check_circle</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Screenings Facilitated</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary font-bold">128</span>
+<span class="material-symbols-outlined text-primary text-[16px]">science</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Peer-Reviewed Studies</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Flagship Modules Spotlight (Bento Inspired Stacking) -->
+<section aria-label="Flagship Health Intelligence Modules" class="px-margin-mobile py-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Strategic Programs</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Targeted primary prevention &amp; screening infrastructure</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">view_quilt</span>
+</div>
+<!-- Spotlight Card 1: Thalassemia -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col" id="genetics">
+<div class="relative h-32 w-full bg-cover bg-center" data-alt="Microscopic biomedical visual of healthy erythrocytes and red blood cells transitioning to hemoglobin genetics schematic in soft lavender and deep violet medical tones with DNA helical hints" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_DttjohZaR6CujwilZ0upZvKMH3u5Mm7zWzHXLr8s0NH_3q7UG3X8Rda7sxmhFHcH-woBBNiWBNKVFofWR8OTfiFljS5NNEnJxque93vkbILCc3QlbGylCKGfVdzwYlFGXkHDGAP877hxoxxJwrirRBBs1Yqpcbxy7LzHWnD5KMjLOSIYvjpW7Hk_7Wjb0VWi9th33EOmOqglt8OJ7nxXwVjVlGG534Ghl9XFHXBweVwpIJ3GEzvR')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute top-3 left-3 bg-tertiary-container text-on-tertiary-container px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">genetics</span>
+<span>Genetics • Carrier Alert</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm -mt-2 relative">
+<h3 class="font-title-md text-title-md text-primary">Genetic Health &amp; Thalassemia Prevention</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Differentiating asymptomatic carrier status from disease expression. Understand Mendelian Punnett inheritance, premarital counseling, and Hb Electrophoresis availability across Dhaka, Chattogram, and Sylhet.
+        </p>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex items-center justify-between mt-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">biotech</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Voluntary Screening Guide Active</span>
+</div>
+<button class="text-tertiary-container font-label-sm text-label-sm font-semibold flex items-center hover:opacity-80" type="button">
+<span>Learn</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Spotlight Card 2: NCD Prevention -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col" id="ncd-hub">
+<div class="relative h-32 w-full bg-cover bg-center" data-alt="Community health nurse in Dhaka measuring blood pressure with digital sphygmomanometer while discussing clinical lifestyle prevention cards in daylight clinic" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkI5eUzZrvhVKzcmzBQvzLwVmKm6IU69zWUEbpdrCRWPMgy-dxaj6tijpxFjZ-kJ-Tw9LzLxOqzYGUMEQWguCvCrRCR5xTN-yB1g9sRXa4M7Nm99DBODUeVFN_gp-yhwVle7ydFSONvH1YOgTwkC1vfdahSxFEQIEPiJD37-0G9B6twEMPTLpAJT3A-m7WNdap5edgtniMpuDP-XJDkl2wGlWUoOEO9DIlHbyyjXAaptlP2EskfkJq')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute top-3 left-3 bg-secondary text-on-secondary px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">cardiology</span>
+<span>Preventive Wellness</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm -mt-2 relative">
+<h3 class="font-title-md text-title-md text-primary">Preventive Health Hub (NCDs)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Actionable protocols for Bangladesh: Salt reduction, diabetes HbA1c screening intervals, early hypertension staging, and contextual nutrition guidance adapted for local dietaries.
+        </p>
+<div class="flex items-center gap-2 pt-1">
+<span class="bg-secondary-container text-on-secondary-fixed px-2.5 py-1 rounded-md font-label-sm text-label-sm">Hypertension</span>
+<span class="bg-secondary-container text-on-secondary-fixed px-2.5 py-1 rounded-md font-label-sm text-label-sm">Type-2 Diabetes</span>
+<span class="bg-secondary-container text-on-secondary-fixed px-2.5 py-1 rounded-md font-label-sm text-label-sm">Heart Risk</span>
+</div>
+</div>
+</article>
+<!-- Spotlight Card 3: District Field Analytics -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm" id="analytics">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-2 rounded-lg bg-primary-container text-on-primary">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</span>
+<div>
+<h3 class="font-title-md text-title-md text-primary leading-tight">Epidemiology &amp; Vulnerability</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Real-time Upazila-level surveillance</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-primary font-semibold">Q1 2025</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Correlating demographic carrier density, blood availability indices, and screening cost-effectiveness figures across 8 geographic divisions.
+      </p>
+<!-- District Sparkline/Distribution Metric Visual -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col gap-2 mt-1">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant">National Carrier Prevalence Index</span>
+<span class="font-semibold text-primary">Estimated 8-10%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2.5 overflow-hidden flex">
+<div class="bg-tertiary-container h-full w-[10%]"></div>
+<div class="bg-secondary h-full w-[28%]"></div>
+<div class="bg-surface-tint h-full w-[62%]"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant font-label-sm pt-0.5">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span> Thalassemia β</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> HbE Trait</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-surface-tint"></span> Standard HbA</span>
+</div>
+</div>
+</article>
+</section>
+<!-- Interactive Educational Tools -->
+<section aria-label="Interactive Self Assessment Tools" class="px-margin-mobile py-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-primary">Interactive Self-Care</h2>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Self-Guided</span>
+</div>
+<!-- Quick Quiz / Educational Readiness Mini-Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">help_center</span>
+</div>
+<div class="flex flex-col gap-1 flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-primary truncate">Should I Get Screened?</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-1.5 py-0.5 rounded">3 Mins</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Interactive screening guide assessing premarital decisions, family history of unexplained anemia, and Hb Electrophoresis protocols.
+        </p>
+<button class="inline-flex items-center gap-1 text-secondary font-label-md text-label-md font-semibold pt-1 self-start hover:underline" id="openReadinessQuiz" type="button">
+<span>Start Assessment</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Blood Pressure & Glucose Tracker Mini Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[20px]">monitor_heart</span>
+</div>
+<div class="flex flex-col gap-1 flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-primary truncate">BP &amp; Sugar Companion</h3>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Diagnostic Aid</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Understand your readings without clinical confusion. Standard thresholds for pre-hypertension and fasting blood glucose explained clearly.
+        </p>
+<a class="inline-flex items-center gap-1 text-secondary font-label-md text-label-md font-semibold pt-1 self-start hover:underline" href="#vitals-guide">
+<span>Explore Norms</span>
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</a>
+</div>
+</div>
+<!-- 64-District Verified Center Locator -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">local_hospital</span>
+<h3 class="font-title-md text-title-md text-primary">Verified Health Directory</h3>
+</div>
+<span class="bg-surface-container-high text-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold">64 Districts</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Accredited government medical college hospitals and non-profit centers offering affordable Hemoglobin Variant Analysis (HPLC/Capillary).
+      </p>
+<!-- Mini Search Field -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">travel_explore</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg pl-9 pr-3 py-2 outline-none focus:bg-surface-container transition-colors" placeholder="Search Dhaka, Bogura, Khulna..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Research & Health Economics Spotlight -->
+<section aria-label="Peer Reviewed Health Economics Feature" class="px-margin-mobile py-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Research Spotlight</h2>
+</div>
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-high text-primary font-label-sm text-label-sm px-2 py-0.5 rounded font-medium">Health Economics</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• March 2025</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary leading-snug">
+        Economic Burden of Hereditary Hemoglobinopathies in South Asia: Cost-Effectiveness of Universal Pre-Marital Carrier Screening
+      </h3>
+<div class="flex items-center gap-space-sm py-1">
+<div class="relative w-10 h-10 rounded-full overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Professional clinical researcher portrait of Dr Farhana Sultana in academic public health attire with stethoscope and research insignia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbbPjZr9r5qcxmZk_F4C0xxpNhdS5DiQDaUqSaDVSQk17qvM1I19a8gDGgYsvDD_ic2je8BX11qKYdsg_o5sVP0uAOYQ9XKNl9b1UxFbQL97wCA4X9jJ780TsyBgmKXccW3l7pLiohj7bUJk_FKA3AHK6Y-LLLg8Io7tE6qBTrdEwIEAdiC3c_pPzWs7HZMoOO9C5HZCMNQfGkIQlwB4VxFObnW6RA7TaqAY0zbK4RBuW9Gr6rXr0D"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Dr. Farhana Sultana, MBBS, MPH</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lead Epidemiologist • Dhaka University &amp; Global Health Collaborators</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant bg-surface-container-low p-3 rounded-lg italic">
+        “Universal voluntary pre-marital carrier identification in Bangladesh prevents an estimated 1,200 annual high-cost lifelong transfusions per 100,000 population, delivering a 14:1 public health ROI.”
+      </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">DOI: 10.1016/j.banglahealth.2025.04</span>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md font-semibold hover:underline" type="button">
+<span class="material-symbols-outlined text-[16px]">article</span>
+<span>Read Paper</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Ethical Framework & Clinical Disclaimers -->
+<section aria-label="Ethics and Legal Safeguards" class="px-margin-mobile py-space-sm pb-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-2 text-primary font-semibold">
+<span class="material-symbols-outlined text-[20px] text-secondary">verified_user</span>
+<h4 class="font-title-md text-title-md">Medical Governance &amp; Ethics Standards</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        HHD Intelligence operates as an educational, epidemiological, and public awareness knowledge engine. Information presented here does not constitute individualized clinical diagnosis or therapeutic prescription. Always consult accredited physicians or licensed genetic counselors before making matrimonial or reproductive medical decisions.
+      </p>
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<div class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+<span>WHO NCD Aligned</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+<span>BMDC Reference Data</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">lock</span>
+<span>Non-Commercial Platform</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Interactive micro-engagement for screening guidance
+  document.addEventListener('DOMContentLoaded', () => {
+    const quizBtn = document.getElementById('openReadinessQuiz');
+    if (quizBtn) {
+      quizBtn.addEventListener('click', () => {
+        alert('Educational Carrier Readiness Module:\n1. Have you had an unexplained low hemoglobin (Hb < 11)?\n2. Does anyone in your family receive regular blood transfusions?\n3. Planning marriage? Ask your diagnostic center for "Hb Variant Analysis by HPLC".');
+      });
+    }
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-14 transition-colors text-secondary font-semibold" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="ncd-hub" href="#"><span class="material-symbols-outlined text-[24px]">shield</span><span class="font-label-sm text-label-sm mt-0.5">NCD Hub</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="thalassemia" href="#"><span class="material-symbols-outlined text-[24px]">genetics</span><span class="font-label-sm text-label-sm mt-0.5">Genetics</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[24px]">bar_chart_4_bars</span><span class="font-label-sm text-label-sm mt-0.5">Impact</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="bd-access" href="#"><span class="material-symbols-outlined text-[24px]">distance</span><span class="font-label-sm text-label-sm mt-0.5">BD Access</span></a></div></nav></body></html>

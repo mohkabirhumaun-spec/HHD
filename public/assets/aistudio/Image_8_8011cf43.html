@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "on-background": "#111c2d", "tertiary-fixed-dim": "#d2bbff", "on-error": "#ffffff", "on-primary-container": "#7a92b0", "secondary-fixed-dim": "#6bd8cb", "error": "#ba1a1a", "on-error-container": "#93000a", "inverse-primary": "#b0c9e8", "surface-container-high": "#dee8ff", "tertiary-container": "#35007a", "primary-fixed-dim": "#b0c9e8", "on-secondary-fixed": "#00201d", "outline": "#74777e", "surface-container": "#e7eeff", "on-surface-variant": "#43474d", "background": "#f9f9ff", "surface-container-low": "#f0f3ff", "primary": "#00152a", "outline-variant": "#c3c6ce", "surface-dim": "#cfdaf2", "on-tertiary-container": "#a375ff", "on-secondary-fixed-variant": "#005049", "surface-variant": "#d8e3fb", "secondary": "#006a61", "on-tertiary-fixed": "#25005a", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#314863", "primary-fixed": "#d1e4ff", "inverse-surface": "#263143", "on-tertiary-fixed-variant": "#5a00c6", "surface-bright": "#f9f9ff", "tertiary-fixed": "#eaddff", "on-secondary-container": "#006f66", "on-primary": "#ffffff", "secondary-fixed": "#89f5e7", "surface-tint": "#49607c", "primary-container": "#102a43", "surface": "#f9f9ff", "surface-container-highest": "#d8e3fb", "on-surface": "#111c2d", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "tertiary": "#1c0047", "inverse-on-surface": "#ecf1ff", "on-primary-fixed": "#011d35", "secondary-container": "#86f2e4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1rem", "space-sm": "0.5rem", "margin": "2rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem" }, "fontFamily": { "title-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "display-lg": ["Plus Jakarta Sans"] }, "fontSize": { "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="bg-surface-container-low px-margin-mobile py-space-xs flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs text-on-surface-variant overflow-hidden"><span class="material-symbols-outlined text-[14px] text-secondary shrink-0">info</span><p class="font-label-sm text-label-sm truncate">Educational &amp; Public Health Intelligence platform. Not for acute clinical emergency.</p></div><a class="shrink-0 inline-flex items-center gap-1 bg-secondary-container text-on-secondary-fixed px-space-sm py-0.5 rounded-full font-label-sm text-label-sm hover:opacity-90 transition-opacity" href="tel:16263"><span class="material-symbols-outlined text-[13px] text-secondary">support_agent</span><span class="hidden xs:inline">16263</span><span>Batayon</span></a></div><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm shrink-0"><img alt="HHD Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_8e34yvVGR9vVF7TCF8GcEFjAgRpjWaTtumehbY6EGf7PrBZitkBKkPheW2jCACJzdumDGSoyAiG6JlQh4dhQB5HjXsp1871NXrJ7NY6HLCh1ccmnRJEIi5yn6TfTBxCfVeJa6kRTbG9BDDB6r_Ks4iGmv86O7U5BTVY0r0A4JXlt1McVsWws86O5yy2-nrVhPLTZa_Qa03Y6OW_bQ1KUfcK0DVd32vmrP8AsfTyby8jlGxaYenehVKc"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">HHD</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Intelligence</span></div></div><div class="flex items-center gap-space-sm"><div class="inline-flex items-center p-0.5 rounded-full bg-surface-container"><span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary">EN</span><span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">বাংলা</span></div><button aria-label="Search Intelligence" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="relative shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsA7K8Z4_LdQz1l41LtFcWDD0t8YtXOGcJ_wCDN4j2zKU8TSiAkddMTvtEicxghgKmkQH6qBSaUVt3cKEzG7LauP8yqkU5XwlzYSB8WgQ7RgyZdCMJHzLzUNzTbdIn3kzvvQ-4fJmMltaUOla1YQkw546W1apwuuOpGyihq1tx_bUMm14Imt5-cVtcVJKuNKvdkRT9N3A9s8BRfD9EjOZMc3tKKGxZVEYKTikAMgcMO-zJIxqw7toN"/><span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-secondary text-on-secondary rounded-full flex items-center justify-center ring-2 ring-surface text-[9px]"><span class="material-symbols-outlined text-[10px]">verified</span></span></div></div></div><nav aria-label="Contextual Topics" class="flex items-center gap-space-md px-margin-mobile pb-space-sm overflow-x-auto no-scrollbar"><a class="font-label-md text-label-md text-on-surface font-semibold whitespace-nowrap" href="#">All Feeds</a><a class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hover:text-on-surface" href="#">Research &amp; Evidence</a><a class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hover:text-on-surface" href="#">Field Ops</a><a class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hover:text-on-surface" href="#">Expert Portal</a><a class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap hover:text-on-surface" href="#">Data Lab</a></nav></div></header><main class="flex flex-col relative w-full pt-32 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin-mobile flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">DGHS Verified Pipeline</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">| Updated 2 hrs ago</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Intelligence &amp; Economics Dashboard</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Monitoring nationwide public health indicators, preventive program reach, cost-effectiveness analysis, and genetic screening epidemiology.
+    </p>
+<!-- Data Mode Toggle Switch -->
+<div class="mt-space-xs p-1 rounded-xl bg-surface-container flex items-center justify-between">
+<button class="flex-1 py-2 px-3 rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-primary text-on-primary shadow-sm" id="btn-public" onclick="setMode('public')" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Public View</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface" id="btn-expert" onclick="setMode('expert')" type="button">
+<span class="material-symbols-outlined text-[16px]">biotech</span>
+<span>Expert &amp; Ops</span>
+</button>
+</div>
+</div>
+<!-- Key Metric KPI Cards (Bento Carousel / Grid) -->
+<div class="mt-space-md px-margin-mobile flex flex-col gap-space-sm">
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- KPI 1: Prevention Reach -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prevention Reach</span>
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">groups</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-sm text-headline-sm text-primary tracking-tight">1,420,890</div>
+<div class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>
+<span>+14.2% YoY</span>
+</div>
+</div>
+<svg class="w-full h-7 text-secondary mt-1" fill="none" viewbox="0 0 100 24">
+<path d="M0 20 Q 25 18, 45 10 T 80 8 T 100 2" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M0 20 Q 25 18, 45 10 T 80 8 T 100 2 L 100 24 L 0 24 Z" fill="currentColor" fill-opacity="0.12"></path>
+</svg>
+</div>
+<!-- KPI 2: Genetic Screenings -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Carrier Screens</span>
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">strikethrough_s</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-sm text-headline-sm text-primary tracking-tight">18,540</div>
+<div class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+<span>HPLC Verified</span>
+</div>
+</div>
+<svg class="w-full h-7 text-on-tertiary-container mt-1" fill="none" viewbox="0 0 100 24">
+<path d="M0 22 Q 20 20, 40 14 T 70 9 T 100 3" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M0 22 Q 20 20, 40 14 T 70 9 T 100 3 L 100 24 L 0 24 Z" fill="currentColor" fill-opacity="0.15"></path>
+</svg>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- KPI 3: Cost per Citizen -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cost / Citizen</span>
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">savings</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-sm text-headline-sm text-primary tracking-tight">৳ 42.50</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Cost-effective index</p>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden mt-1">
+<div class="bg-primary-container h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- KPI 4: DALYs Averted -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">DALYs Averted</span>
+<span class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">vital_signs</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-sm text-headline-sm text-primary tracking-tight">3,840</div>
+<p class="font-label-sm text-label-sm text-secondary font-semibold mt-1">WHO Tier 1 Impact</p>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden mt-1">
+<div class="bg-secondary h-full rounded-full" style="width: 86%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Map & Regional Distribution -->
+<div class="mt-space-lg px-margin-mobile flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Division Coverage &amp; Carrier Risk</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bangladesh Geographic Surveillance Index</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">8 Divisions</span>
+</div>
+<!-- Map container -->
+<div class="rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm p-space-sm flex flex-col gap-space-sm">
+<div class="w-full h-48 bg-cover bg-center rounded-lg relative overflow-hidden flex items-end p-space-sm" data-location="Bangladesh" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoeKMP-0dAw5n86kpDaQKEvvbOtfvb1K_jggRIpEa44x9q43pELhKZ5DhQxClEO7uxG9DZqiCW2bkfC_UOisZgyRtyHH1ehR5A0y6bu8L_tM-8R4cBUb0LAnAHVq9B5_OIMT0LTgoAm1Ldf89HOiJOktAtWfXYAqAXNuggi7miuBRHg2dOzaV16wddklJp0y8PIizg_9zDeDRqCoH_mh-J7gLkGldhXPewcsVPrl5oXe-101y13ZLs')">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between w-full text-on-primary">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">pin_drop</span>
+<div>
+<p class="font-label-md text-label-md leading-tight text-surface">Active Field Clusters</p>
+<p class="font-label-sm text-label-sm text-surface-variant">64 Upazilas actively reporting</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface/20 backdrop-blur-md text-surface">Surveillance Mode</span>
+</div>
+</div>
+<!-- Regional Share Horizontal Breakdown -->
+<div class="flex flex-col gap-space-xs pt-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Division Distribution of Prevention Outreach</span>
+<span class="text-secondary font-semibold">100% Normalized</span>
+</div>
+<div class="w-full h-3 rounded-full overflow-hidden flex bg-surface-container">
+<div class="bg-primary-container" style="width: 34%" title="Dhaka: 34%"></div>
+<div class="bg-secondary" style="width: 22%" title="Chattogram: 22%"></div>
+<div class="bg-secondary-fixed-dim" style="width: 15%" title="Rajshahi: 15%"></div>
+<div class="bg-primary-fixed-dim" style="width: 11%" title="Khulna: 11%"></div>
+<div class="bg-tertiary-container" style="width: 8%" title="Sylhet: 8%"></div>
+<div class="bg-tertiary-fixed-dim" style="width: 6%" title="Rangpur: 6%"></div>
+<div class="bg-surface-tint" style="width: 4%" title="Barishal: 4%"></div>
+</div>
+<!-- Division Chip Pills -->
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span> Dhaka <strong>34%</strong>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Chattogram <strong>22%</strong>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span> Rajshahi <strong>15%</strong>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span> Khulna <strong>11%</strong>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span> Sylhet <strong>8%</strong>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span> Rangpur <strong>6%</strong>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span> Barishal <strong>4%</strong>
+</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Health Economics & Prevention ROI Block -->
+<div class="mt-space-lg px-margin-mobile flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Health Economics &amp; ROI</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cost of Prevention vs. Lifetime Management</p>
+</div>
+<div class="p-1 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center gap-1 px-2.5">
+<span class="material-symbols-outlined text-[15px]">insights</span>
+<span class="font-label-sm text-label-sm">18:1 Ratio</span>
+</div>
+</div>
+<!-- Comparative Economics Card -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<!-- Callout ROI stat -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">currency_exchange</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-primary">18x Economic Dividend</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">For every ৳ 1 invested in youth HPLC carrier testing</div>
+</div>
+</div>
+</div>
+<!-- Cost Contrast Visualization -->
+<div class="flex flex-col gap-space-sm">
+<!-- Preventative Cost Row -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+              Prevention &amp; Couple Screening (Per Family)
+            </span>
+<span class="text-primary font-bold">~ ৳ 2,500</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 3.5%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">One-time genetic panel &amp; genetic counseling session</span>
+</div>
+<!-- Treatment Cost Row -->
+<div class="flex flex-col gap-1 pt-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">medication</span>
+              Major Thalassemia Management (Annual / Patient)
+            </span>
+<span class="text-error font-bold">৳ 250,000 - ৳ 450,000/yr</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-3 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 95%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Recurrent blood transfusions, iron chelation &amp; organ screening</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low p-space-sm rounded-lg">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">info</span>
+          Direct Out-of-Pocket Catastrophic Expense Reduction
+        </span>
+<span class="font-semibold text-primary">91.4% Saved</span>
+</div>
+</div>
+</div>
+<!-- Operational Feed & Research Insights -->
+<div class="mt-space-lg px-margin-mobile flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Operations &amp; Research</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live telemetry from district stations</p>
+</div>
+<a class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-0.5" href="#">
+<span>View all</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<!-- Feed Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- Operational Dispatch 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Rangpur Division</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Today, 11:30 AM</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary mt-1">Rangpur Rural Upazila HPLC Camp Complete</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Screened 342 pre-marital college students with automated hemoglobin variant analyzers. Identified 38 Beta-Thalassemia traits; targeted genetic counseling provided on-site.
+        </p>
+<div class="flex items-center gap-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span> 342 Samples
+          </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">person_alert</span> 11.1% Trait Yield
+          </span>
+</div>
+</div>
+<!-- Operational Dispatch 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Sylhet Division</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Yesterday</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary mt-1">Tea Garden Community Health Worker Deployment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Specialized multilingual educational campaign conducted in Bengali and Sadri dialects across Sreemangal estates. Enrolled 1,120 families in preventative nutrition tracking.
+        </p>
+<div class="flex items-center gap-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">record_voice_over</span> 18 Sessions
+          </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">diversity_1</span> 1,120 Registered
+          </span>
+</div>
+</div>
+<!-- Research Paper Spotlight -->
+<div class="p-space-md rounded-xl bg-surface-container-high shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Peer-Reviewed Evidence</span>
+<span class="material-symbols-outlined text-primary text-[18px]">menu_book</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary mt-1">
+          Economic Burden &amp; Cost-Effectiveness of HPLC Screening in Pre-Marital Youth Cohorts
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Published under the National Health Intelligence Taskforce. Demonstrates multi-decade macroeconomic returns and prevention of transfusion-dependent births in emerging economies.
+        </p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">HHD Intelligence Labs (2025)</span>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm shadow-sm hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">download</span>
+<span>Read Policy Brief</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Open Data & Methodology Disclaimer Footer -->
+<div class="mt-space-lg mb-space-md px-margin-mobile">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+<span class="font-label-md text-label-md">Methodology &amp; Standards Note</span>
+</div>
+<p class="font-body-sm text-body-sm">
+        All epidemiological estimates, carrier indices, and health economic ROI parameters conform to the World Health Organization (WHO) and Directorate General of Health Services (DGHS) Bangladesh clinical reporting standards. Figures are subject to continuous field telemetry synchronization.
+      </p>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">CC-BY 4.0 Open Public Health License</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function setMode(mode) {
+    var btnPub = document.getElementById('btn-public');
+    var btnExp = document.getElementById('btn-expert');
+    if (!btnPub || !btnExp) return;
+    
+    if (mode === 'public') {
+      btnPub.className = 'flex-1 py-2 px-3 rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-primary text-on-primary shadow-sm';
+      btnExp.className = 'flex-1 py-2 px-3 rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface';
+    } else {
+      btnExp.className = 'flex-1 py-2 px-3 rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-primary text-on-primary shadow-sm';
+      btnPub.className = 'flex-1 py-2 px-3 rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface';
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="ncd-hub" href="#"><span class="material-symbols-outlined text-[24px]">shield</span><span class="font-label-sm text-label-sm mt-0.5">NCD Hub</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="thalassemia" href="#"><span class="material-symbols-outlined text-[24px]">genetics</span><span class="font-label-sm text-label-sm mt-0.5">Genetics</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-14 transition-colors text-secondary font-semibold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[24px]">bar_chart_4_bars</span><span class="font-label-sm text-label-sm mt-0.5">Impact</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-14 text-on-surface-variant hover:text-on-surface transition-colors" data-path="bd-access" href="#"><span class="material-symbols-outlined text-[24px]">distance</span><span class="font-label-sm text-label-sm mt-0.5">BD Access</span></a></div></nav></body></html>

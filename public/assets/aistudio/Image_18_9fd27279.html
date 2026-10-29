@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "secondary-fixed-dim": "#6bd8cb",
+        "surface-container-high": "#dee8ff",
+        "on-surface-variant": "#43474d",
+        "tertiary": "#1c0047",
+        "primary-container": "#102a43",
+        "on-primary-container": "#7a92b0",
+        "on-error-container": "#93000a",
+        "surface-bright": "#f9f9ff",
+        "on-primary": "#ffffff",
+        "surface-variant": "#d8e3fb",
+        "on-secondary-fixed": "#00201d",
+        "primary": "#00152a",
+        "surface-container": "#e7eeff",
+        "surface-tint": "#49607c",
+        "outline-variant": "#c3c6ce",
+        "on-secondary": "#ffffff",
+        "primary-fixed-dim": "#b0c9e8",
+        "on-surface": "#111c2d",
+        "on-secondary-fixed-variant": "#005049",
+        "secondary-container": "#86f2e4",
+        "error-container": "#ffdad6",
+        "on-primary-fixed-variant": "#314863",
+        "error": "#ba1a1a",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-highest": "#d8e3fb",
+        "tertiary-container": "#35007a",
+        "on-tertiary-container": "#a375ff",
+        "on-background": "#111c2d",
+        "surface": "#f9f9ff",
+        "on-tertiary-fixed-variant": "#5a00c6",
+        "secondary-fixed": "#89f5e7",
+        "background": "#f9f9ff",
+        "tertiary-fixed-dim": "#d2bbff",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed": "#25005a",
+        "tertiary-fixed": "#eaddff",
+        "on-secondary-container": "#006f66",
+        "primary-fixed": "#d1e4ff",
+        "on-error": "#ffffff",
+        "secondary": "#006a61",
+        "on-primary-fixed": "#011d35",
+        "inverse-surface": "#263143",
+        "surface-container-low": "#f0f3ff",
+        "inverse-on-surface": "#ecf1ff",
+        "inverse-primary": "#b0c9e8",
+        "surface-dim": "#cfdaf2",
+        "outline": "#74777e"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "gutter-mobile": "1rem",
+        "space-xl": "2.5rem",
+        "space-lg": "1.5rem",
+        "margin": "2rem",
+        "space-md": "1rem",
+        "gutter": "1.5rem",
+        "space-sm": "0.5rem",
+        "margin-mobile": "1rem",
+        "space-xs": "0.25rem"
+      },
+      "fontFamily": {
+        "display-lg-mobile": ["Plus Jakarta Sans"],
+        "body-lg": ["Inter"],
+        "title-md": ["Plus Jakarta Sans"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "label-sm": ["Inter"],
+        "body-sm": ["Inter"],
+        "headline-lg-mobile": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "body-md": ["Inter"],
+        "label-md": ["Inter"],
+        "display-lg": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "display-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+        "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+        "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "headline-lg-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}],
+        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+        "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+        "display-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(16,42,67,0.06)]"><div class="w-full h-20 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">shield_with_heart</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-primary tracking-tight font-bold">HHD Intelligence</span><span class="px-space-xs py-[2px] rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm border border-outline-variant/30">National Node</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Public Health &amp; Genetic Health Platform</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-[4px] rounded-full bg-surface-container-lowest shadow-sm border border-outline-variant/20"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-secondary font-medium">DGHS Live Data Feed</span><span class="font-label-sm text-label-sm text-outline-variant">•</span><span class="font-label-sm text-label-sm text-on-surface-variant">Geo-Sync: 64 Districts Active</span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-space-xs rounded-xl bg-surface-container-low" data-active-classes="bg-primary text-on-primary rounded-lg font-title-md"><a class="px-space-sm py-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all" data-path="intelligence-dashboard" href="#">Intelligence Dashboard</a><a class="px-space-sm py-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all" data-path="preventive-hub" href="#">Preventive Hub</a><a class="px-space-sm py-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all" data-path="genetics-and-thalassemia" href="#">Genetics &amp; Thalassemia</a><a class="px-space-sm py-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all" data-path="research-and-evidence" href="#">Research &amp; Evidence</a><a class="px-space-sm py-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all" data-path="field-operations" href="#">Field Operations</a><a class="px-space-sm py-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-all" data-path="bangladesh-access" href="#">Bangladesh Access</a></nav><div class="flex items-center gap-space-sm flex-shrink-0"><div class="hidden 2xl:flex items-center w-56 h-10 px-space-sm rounded-lg bg-surface-container-lowest border border-outline-variant/40 shadow-sm"><span class="material-symbols-outlined text-outline text-[18px] mr-space-xs">search</span><span class="flex-1 font-body-sm text-body-sm text-outline">Epidemiology lookup...</span><kbd class="px-space-xs py-[2px] rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">⌘K</kbd></div><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-error-container text-on-error-container font-label-md text-label-md hover:bg-error hover:text-on-error transition-all shadow-sm" href="tel:16263"><span class="material-symbols-outlined text-[16px]">call</span><span class="hidden sm:inline font-semibold">16263 Shastho Batayon</span></a><div class="flex items-center p-[2px] rounded-full bg-surface-container border border-outline-variant/30 text-on-surface-variant font-label-sm text-label-sm"><span class="px-space-xs py-[2px] rounded-full bg-primary text-on-primary font-semibold">EN</span><span class="px-space-xs py-[2px] text-on-surface-variant hover:text-on-surface cursor-pointer">বাংলা</span></div><div class="relative flex items-center gap-space-xs pl-space-xs"><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface"></span></div></div></div></div></header><aside class="fixed left-0 top-20 bottom-0 w-64 bg-surface-container-lowest border-r border-outline-variant/20 z-40 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(16,42,67,0.02)]"><div class="px-space-md flex flex-col gap-space-md"><div class="px-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Operational Modules</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="intelligence-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">National Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="thalassemia-registry" href="#"><span class="material-symbols-outlined text-[20px]">genetics</span><span class="font-body-md text-body-md">Genetic Registry</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="field-operations" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-body-md text-body-md">Division Telemetry</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="epidemiological-alerts" href="#"><span class="material-symbols-outlined text-[20px]">crisis_alert</span><span class="font-body-md text-body-md">Outbreak Alerts</span></a></nav></div><div class="px-space-md flex flex-col gap-space-sm border-t border-outline-variant/20 pt-space-md"><div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Clinical Node Status</span><span class="w-2 h-2 rounded-full bg-secondary"></span></div><span class="font-body-sm text-body-sm text-on-surface font-semibold">BSMMU &amp; IEDCR Linked</span></div></div></aside><div class="pl-64"><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full relative">
+<!-- ==================== BACKGROUND PAGE CONTEXT (GENETICS & THALASSEMIA MODULE) ==================== -->
+<div class="w-full px-gutter py-space-lg flex flex-col gap-space-lg opacity-40 pointer-events-none select-none filter blur-[1px]">
+<!-- Top Breadcrumb & Status Ribbon -->
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<span class="text-primary font-bold">HHD Genetics Module</span>
+<span>/</span>
+<span>Hemoglobinopathies Registry</span>
+<span>/</span>
+<span class="text-secondary font-semibold">National Carrier Screening &amp; Pedigree Analytics</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-[2px] rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">IEDCR Cluster Node 04 Active</span>
+<span class="px-space-sm py-[2px] rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">BSMMU Hemoglobin Reference Lab</span>
+</div>
+</div>
+<!-- Background Stat Strip -->
+<div class="grid grid-cols-4 gap-space-md w-full">
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Estimated Carrier Rate (BD)</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">11.4%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">~19 Million β-Thal &amp; HbE carriers nationwide</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Annual Births with Major Thal</span>
+<span class="font-headline-md text-headline-md text-error font-bold">~8,500</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Transfusion-dependent clinical phenotype</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Pre-Marital HPLC Screened (YTD)</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold">142,890</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Up 28% across 64 civil surgeon nodes</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Genetic Counselors Deployed</span>
+<span class="font-headline-md text-headline-md text-tertiary-container font-bold">412</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Upazila &amp; District Referral Centers</span>
+</div>
+</div>
+<!-- Background Section Preview -->
+<div class="w-full h-80 rounded-xl bg-surface-container-low p-space-lg flex items-center justify-center">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-[48px] text-outline-variant">analytics</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">District-wise Trait Penetration Map</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Chittagong Hill Tracts, Sylhet, Rangpur, and Coastal belt allele survey data</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================== MODAL OVERLAY & WORKSPACE ==================== -->
+<div class="fixed inset-0 top-20 z-50 flex items-start justify-center p-space-md md:p-space-lg overflow-y-auto bg-primary/40 backdrop-blur-md">
+<!-- Modal Card Container -->
+<div class="w-full max-w-7xl bg-surface-container-lowest rounded-xl shadow-xl flex flex-col overflow-hidden my-auto animate-[fadeIn_0.2s_ease-out]">
+<!-- Modal Header -->
+<div class="bg-primary-container px-space-lg py-space-md text-on-primary flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[26px]">family_restroom</span>
+<span class="font-headline-md text-headline-md text-on-primary font-bold tracking-tight">Pedigree &amp; Autosomal Recessive Risk Calculator</span>
+<span class="font-label-md text-label-md px-space-xs py-[2px] rounded bg-surface-container-highest/20 text-secondary-fixed">বংশগত রোগ ও পারিবারিক ইতিহাস মডেলিং</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-primary-container max-w-4xl">
+            Privacy-Preserving Clinical Pre-Marital &amp; Consanguinity Genetic Modeling for Beta-Thalassemia and Hemoglobin E Allelic Transmission.
+          </span>
+<div class="flex flex-wrap items-center gap-space-xs pt-[2px]">
+<span class="inline-flex items-center gap-1 px-space-xs py-[2px] rounded-full bg-secondary/30 text-secondary-fixed text-label-sm font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span> DGHS Bioethics Protocol Aligned
+            </span>
+<span class="inline-flex items-center gap-1 px-space-xs py-[2px] rounded-full bg-surface-container-highest/15 text-primary-fixed text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[13px]">lock</span> Client-Side Zero Cloud Data Retention
+            </span>
+<span class="inline-flex items-center gap-1 px-space-xs py-[2px] rounded-full bg-surface-container-high/20 text-on-primary-container text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[13px]">info</span> Non-Diagnostic Educational Model
+            </span>
+</div>
+</div>
+<!-- Header Actions -->
+<div class="flex items-center gap-space-xs flex-shrink-0 self-end md:self-center">
+<button class="flex items-center gap-1 px-space-sm py-space-xs rounded-lg bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-on-primary font-label-md text-label-md transition-colors" id="resetModelBtn" title="Reset to baseline">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>Reset Model</span>
+</button>
+<button class="flex items-center gap-1 px-space-sm py-space-xs rounded-lg bg-secondary hover:bg-secondary/90 text-on-secondary font-label-md text-label-md transition-colors shadow-sm" id="printReportBtn">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Confidential Summary (PDF)</span>
+</button>
+<button aria-label="Close dialog" class="w-8 h-8 rounded-lg bg-surface-container-highest/20 hover:bg-error hover:text-on-error text-on-primary flex items-center justify-center transition-colors ml-1" id="closeModalBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Main Workspace 3-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md p-space-md bg-surface-container-low min-h-[620px]">
+<!-- ==================== LEFT PANEL: INPUT CONFIGURATION (3 COLS) ==================== -->
+<div class="lg:col-span-3 flex flex-col gap-space-md overflow-y-auto max-h-[750px] pr-1">
+<!-- Genotype Selectors for Couple -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-secondary">strikethrough_s</span>
+                Couple Genotypes
+              </span>
+<span class="font-label-sm text-label-sm text-outline">HPLC Electrophoresis</span>
+</div>
+<!-- Person 1 (Self / Partner A) -->
+<div class="flex flex-col gap-1 p-space-xs rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1" for="person1Select">
+<span class="w-2.5 h-2.5 rounded-full bg-primary inline-block"></span> Person 1 (Partner A)
+                </label>
+<span class="font-label-sm text-label-sm text-secondary font-semibold" id="p1Badge">Carrier</span>
+</div>
+<select class="w-full text-body-sm font-body-sm rounded-lg bg-surface-container-lowest p-space-xs text-on-surface shadow-sm focus:outline-none" id="person1Select">
+<option value="normal">Normal / Unaffected (HbA / HbA)</option>
+<option selected="" value="beta-thal">β-Thalassemia Trait Carrier (HbA / β-Thal)</option>
+<option value="hbe">HbE Trait Carrier (HbA / HbE)</option>
+<option value="unknown">Unknown / Not Yet Screened</option>
+</select>
+<span class="font-label-sm text-label-sm text-on-surface-variant italic">Allele profile: αα/αα, β/β<sup>thal</sup></span>
+</div>
+<!-- Person 2 (Spouse / Intended Partner B) -->
+<div class="flex flex-col gap-1 p-space-xs rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1" for="person2Select">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary inline-block"></span> Person 2 (Partner B)
+                </label>
+<span class="font-label-sm text-label-sm text-secondary font-semibold" id="p2Badge">Carrier</span>
+</div>
+<select class="w-full text-body-sm font-body-sm rounded-lg bg-surface-container-lowest p-space-xs text-on-surface shadow-sm focus:outline-none" id="person2Select">
+<option value="normal">Normal / Unaffected (HbA / HbA)</option>
+<option selected="" value="beta-thal">β-Thalassemia Trait Carrier (HbA / β-Thal)</option>
+<option value="hbe">HbE Trait Carrier (HbA / HbE)</option>
+<option value="unknown">Unknown / Not Yet Screened</option>
+</select>
+<span class="font-label-sm text-label-sm text-on-surface-variant italic">Allele profile: αα/αα, β/β<sup>thal</sup></span>
+</div>
+</div>
+<!-- Extended Pedigree & Consanguinity Module -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<span class="font-title-md text-title-md text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">diversity_1</span>
+              Familial Lineage &amp; Consanguinity
+            </span>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="consanguinitySelect">Familial Relationship / আত্মীয়তার সম্পর্ক</label>
+<select class="w-full text-body-sm font-body-sm rounded-lg bg-surface-container-low p-space-xs text-on-surface focus:outline-none" id="consanguinitySelect">
+<option selected="" value="unrelated">Non-Related / Outbred (সম্পর্কহীন)</option>
+<option value="first-cousin">First Cousins (আপন খালাতো/চাচাতো ভাই-বোন)</option>
+<option value="second-cousin">Second Cousins (দূরসম্পর্কীয় আত্মীয়)</option>
+</select>
+<p class="font-label-sm text-label-sm text-on-surface-variant" id="consanguinityNote">
+                Standard Mendelian assortment applied. Non-related background coefficient of inbreeding (F = 0).
+              </p>
+</div>
+<!-- Pedigree History Checkboxes -->
+<div class="flex flex-col gap-space-xs pt-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Family History Markers:</span>
+<label class="flex items-start gap-space-xs p-1 rounded hover:bg-surface-container-low cursor-pointer transition-colors">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary" id="checkSiblingAffected" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">
+                  1st-Degree Relative (Sibling/Parent) receiving periodic blood transfusions
+                </span>
+</label>
+<label class="flex items-start gap-space-xs p-1 rounded hover:bg-surface-container-low cursor-pointer transition-colors">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary" id="checkExtendedCarrier" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">
+                  Paternal or Maternal Uncle/Aunt confirmed Trait Carrier by HPLC
+                </span>
+</label>
+<label class="flex items-start gap-space-xs p-1 rounded hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="mt-1 w-4 h-4 rounded text-primary" id="checkUnexplainedAnemia" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">
+                  History of refractory microcytic anemia unresponsive to iron therapy
+                </span>
+</label>
+</div>
+</div>
+<!-- Biomarker Input (Optional Precision Mode) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-secondary">biotech</span>
+                Lab Biomarkers (CBC / HPLC)
+              </span>
+<span class="px-space-xs py-[2px] rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Auto-Index</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium" for="mcvInput">MCV (fL)</label>
+<input class="p-1 px-2 text-body-sm font-body-sm rounded bg-surface-container-low text-on-surface focus:outline-none" id="mcvInput" step="0.1" type="number" value="68.2"/>
+<span class="font-label-sm text-label-sm text-secondary font-medium">&lt;80 fL (Microcytic)</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium" for="mchInput">MCH (pg)</label>
+<input class="p-1 px-2 text-body-sm font-body-sm rounded bg-surface-container-low text-on-surface focus:outline-none" id="mchInput" step="0.1" type="number" value="21.4"/>
+<span class="font-label-sm text-label-sm text-secondary font-medium">&lt;27 pg (Hypochromic)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium" for="hba2Input">HbA2 (%)</label>
+<input class="p-1 px-2 text-body-sm font-body-sm rounded bg-surface-container-low text-on-surface focus:outline-none" id="hba2Input" step="0.1" type="number" value="5.4"/>
+<span class="font-label-sm text-label-sm text-error font-medium">&gt;3.5% (Elevated Trait)</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium" for="mentzerDisplay">Mentzer Index</label>
+<div class="p-1 px-2 text-body-sm font-body-sm rounded bg-secondary-container/50 text-on-secondary-container font-semibold flex items-center justify-between" id="mentzerDisplay">
+<span>11.8</span>
+<span class="text-label-sm">&lt;13 Thal</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MCV / RBC count</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================== CENTER PANEL: INTERACTIVE PEDIGREE & TRANSMISSION ENGINE (6 COLS) ==================== -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<!-- 3-Generation Pedigree Tree Card -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm flex-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">account_tree</span>
+<span class="font-title-md text-title-md text-primary font-bold">Standard 3-Generation Pedigree Lineage</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-3 h-3 border border-outline inline-block"></span> Male</span>
+<span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full border border-outline inline-block"></span> Female</span>
+<span class="flex items-center gap-1"><span class="w-3 h-3 bg-secondary inline-block"></span> Carrier</span>
+<span class="flex items-center gap-1"><span class="w-3 h-3 bg-error inline-block"></span> Major</span>
+</div>
+</div>
+<!-- Pedigree Visual Canvas -->
+<div class="w-full h-72 rounded-lg bg-surface-container-low p-2 relative flex flex-col justify-between overflow-hidden">
+<!-- Grid background subtle texture -->
+<div class="absolute inset-0 bg-[radial-gradient(#d8e3fb_1px,transparent_1px)] [background-size:16px_16px] opacity-60"></div>
+<!-- Generation Markers Left Axis -->
+<div class="absolute left-2 top-2 bottom-2 flex flex-col justify-between font-label-sm text-label-sm text-outline z-10">
+<span class="px-1 py-[1px] bg-surface-container-lowest rounded shadow-xs">Gen I</span>
+<span class="px-1 py-[1px] bg-surface-container-lowest rounded shadow-xs">Gen II</span>
+<span class="px-1 py-[1px] bg-surface-container-lowest rounded shadow-xs">Gen III</span>
+</div>
+<!-- Interactive Pedigree SVG Diagram -->
+<svg class="w-full h-full relative z-10" fill="none" viewbox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<!-- Connectors: Gen I to Parents -->
+<path d="M 170 35 L 250 35" stroke="#74777e" stroke-width="1.5"></path>
+<path d="M 210 35 L 210 65" stroke="#74777e" stroke-width="1.5"></path>
+<path d="M 430 35 L 510 35" stroke="#74777e" stroke-width="1.5"></path>
+<path d="M 470 35 L 470 65" stroke="#74777e" stroke-width="1.5"></path>
+<!-- Connectors: Parents to Subject Couple -->
+<path d="M 150 115 L 270 115" stroke="#74777e" stroke-width="1.5"></path>
+<path d="M 210 65 L 210 115" stroke="#74777e" stroke-width="1.5"></path>
+<path d="M 270 115 L 270 145" stroke="#74777e" stroke-width="1.5"></path>
+<path d="M 410 115 L 530 115" stroke="#74777e" stroke-width="1.5"></path>
+<path d="M 470 65 L 470 115" stroke="#74777e" stroke-width="1.5"></path>
+<path d="M 410 115 L 410 145" stroke="#74777e" stroke-width="1.5"></path>
+<!-- Couple Marriage Line (Gen II / III focus) -->
+<path d="M 270 160 L 410 160" stroke="#00152a" stroke-dasharray="none" stroke-width="2.5"></path>
+<!-- Offspring drop line -->
+<path d="M 340 160 L 340 200" stroke="#00152a" stroke-width="2"></path>
+<path d="M 180 200 L 500 200" stroke="#00152a" stroke-width="1.5"></path>
+<path d="M 180 200 L 180 220" stroke="#00152a" stroke-width="1.5"></path>
+<path d="M 285 200 L 285 220" stroke="#00152a" stroke-width="1.5"></path>
+<path d="M 395 200 L 395 220" stroke="#00152a" stroke-width="1.5"></path>
+<path d="M 500 200 L 500 220" stroke="#00152a" stroke-width="1.5"></path>
+<!-- ================= GENERATION I NODES ================= -->
+<!-- Paternal Grandfather (Square, unaffected) -->
+<rect class="cursor-pointer hover:stroke-secondary transition-all" fill="#ffffff" height="30" rx="4" stroke="#102a43" stroke-width="2" width="30" x="155" y="20"></rect>
+<text fill="#43474d" font-family="Inter" font-size="9" text-anchor="middle" x="170" y="60">P. Grandfa</text>
+<!-- Paternal Grandmother (Circle, Carrier) -->
+<circle class="cursor-pointer hover:stroke-secondary transition-all" cx="265" cy="35" fill="#ffffff" r="15" stroke="#102a43" stroke-width="2"></circle>
+<path d="M 265 20 A 15 15 0 0 1 265 50 Z" fill="#006a61"></path>
+<text fill="#43474d" font-family="Inter" font-size="9" text-anchor="middle" x="265" y="60">P. Grandmo</text>
+<!-- Maternal Grandfather (Square, Carrier) -->
+<rect class="cursor-pointer hover:stroke-secondary transition-all" fill="#ffffff" height="30" rx="4" stroke="#102a43" stroke-width="2" width="30" x="415" y="20"></rect>
+<path d="M 430 20 L 445 20 L 445 50 L 430 50 Z" fill="#006a61"></path>
+<text fill="#43474d" font-family="Inter" font-size="9" text-anchor="middle" x="430" y="60">M. Grandfa</text>
+<!-- Maternal Grandmother (Circle, unaffected) -->
+<circle class="cursor-pointer hover:stroke-secondary transition-all" cx="525" cy="35" fill="#ffffff" r="15" stroke="#102a43" stroke-width="2"></circle>
+<text fill="#43474d" font-family="Inter" font-size="9" text-anchor="middle" x="525" y="60">M. Grandmo</text>
+<!-- ================= GENERATION II NODES ================= -->
+<!-- Father's Sibling (Uncle, Unaffected) -->
+<rect fill="#ffffff" height="30" rx="4" stroke="#74777e" stroke-width="1.5" width="30" x="135" y="100"></rect>
+<text fill="#74777e" font-family="Inter" font-size="9" text-anchor="middle" x="150" y="140">Pat. Uncle</text>
+<!-- Partner A / Subject (Square, Carrier - DYNAMIC) -->
+<g class="cursor-pointer transition-transform hover:scale-105" id="pedigreeNodeP1">
+<rect fill="#ffffff" height="30" rx="4" stroke="#00152a" stroke-width="2.5" width="30" x="255" y="145"></rect>
+<path d="M 270 145 L 285 145 L 285 175 L 270 175 Z" fill="#006a61" id="pedigreeNodeP1Fill"></path>
+<text fill="#00152a" font-family="Plus Jakarta Sans" font-size="11" font-weight="700" text-anchor="middle" x="270" y="190">Partner A</text>
+<text fill="#006a61" font-family="Inter" font-size="9" id="pedigreeNodeP1Label" text-anchor="middle" x="270" y="200">Carrier (HbA/β)</text>
+</g>
+<!-- Partner B / Spouse (Circle, Carrier - DYNAMIC) -->
+<g class="cursor-pointer transition-transform hover:scale-105" id="pedigreeNodeP2">
+<circle cx="410" cy="160" fill="#ffffff" r="15" stroke="#00152a" stroke-width="2.5"></circle>
+<path d="M 410 145 A 15 15 0 0 1 410 175 Z" fill="#006a61" id="pedigreeNodeP2Fill"></path>
+<text fill="#00152a" font-family="Plus Jakarta Sans" font-size="11" font-weight="700" text-anchor="middle" x="410" y="190">Partner B</text>
+<text fill="#006a61" font-family="Inter" font-size="9" id="pedigreeNodeP2Label" text-anchor="middle" x="410" y="200">Carrier (HbA/β)</text>
+</g>
+<!-- Mother's Sibling (Affected Aunt / Cousin Line) -->
+<circle cx="530" cy="115" fill="#ba1a1a" r="15" stroke="#ba1a1a" stroke-width="1.5"></circle>
+<text fill="#ba1a1a" font-family="Inter" font-size="9" text-anchor="middle" x="530" y="140">Mat. Aunt (Maj)</text>
+<!-- ================= GENERATION III NODES (MENDELIAN OFFSPRING PROBABILITY) ================= -->
+<!-- Offspring 1: Normal (25%) -->
+<g class="transition-all" id="offspring1Node">
+<rect fill="#ffffff" height="28" rx="4" stroke="#006a61" stroke-width="2" width="28" x="165" y="220"></rect>
+<text fill="#006a61" font-family="Inter" font-size="10" font-weight="600" text-anchor="middle" x="179" y="238">HbA</text>
+<text fill="#43474d" font-family="Inter" font-size="9" text-anchor="middle" x="179" y="258">25% Unaffected</text>
+</g>
+<!-- Offspring 2: Carrier (25%) -->
+<g class="transition-all" id="offspring2Node">
+<circle cx="285" cy="234" fill="#ffffff" r="14" stroke="#006a61" stroke-width="2"></circle>
+<path d="M 285 220 A 14 14 0 0 1 285 248 Z" fill="#006a61"></path>
+<text fill="#43474d" font-family="Inter" font-size="9" text-anchor="middle" x="285" y="258">25% Carrier</text>
+</g>
+<!-- Offspring 3: Carrier (25%) -->
+<g class="transition-all" id="offspring3Node">
+<rect fill="#ffffff" height="28" rx="4" stroke="#006a61" stroke-width="2" width="28" x="381" y="220"></rect>
+<path d="M 395 220 L 409 220 L 409 248 L 395 248 Z" fill="#006a61"></path>
+<text fill="#43474d" font-family="Inter" font-size="9" text-anchor="middle" x="395" y="258">25% Carrier</text>
+</g>
+<!-- Offspring 4: Affected Major (25%) -->
+<g class="transition-all" id="offspring4Node">
+<circle cx="500" cy="234" fill="#ba1a1a" id="offspring4Shape" r="14" stroke="#ba1a1a" stroke-width="2"></circle>
+<text fill="#ffffff" font-family="Inter" font-size="10" font-weight="700" id="offspring4Code" text-anchor="middle" x="500" y="238">β/β</text>
+<text fill="#ba1a1a" font-family="Inter" font-size="9" font-weight="600" id="offspring4Label" text-anchor="middle" x="500" y="258">25% Major</text>
+</g>
+</svg>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-1 px-1">
+<span>Standard ISCN / ACMG Pedigree Nomenclature</span>
+<span class="text-secondary font-medium">Click on any pedigree symbol to review lineage annotation</span>
+</div>
+</div>
+<!-- Punnett Square Grid & Transmission Engine -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-secondary">grid_view</span>
+                Offspring Punnett Matrix &amp; Transmission Probability
+              </span>
+<span class="px-space-sm py-[2px] rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-bold" id="riskCategoryPill">
+                25% Recessive Major Risk
+              </span>
+</div>
+<!-- Risk Visual Tier Bar -->
+<div class="w-full flex flex-col gap-1">
+<div class="h-3 w-full rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="h-full bg-secondary transition-all" id="barNormal" style="width: 25%" title="Normal (25%)"></div>
+<div class="h-full bg-secondary-fixed-dim transition-all" id="barCarrier" style="width: 50%" title="Carrier (50%)"></div>
+<div class="h-full bg-error transition-all" id="barMajor" style="width: 25%" title="Affected Major (25%)"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-semibold text-secondary" id="lblNormal"><span class="w-2 h-2 rounded-full bg-secondary"></span> 25% Unaffected Normal</span>
+<span class="flex items-center gap-1 font-semibold text-on-secondary-fixed-variant" id="lblCarrier"><span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span> 50% Asymptomatic Carrier</span>
+<span class="flex items-center gap-1 font-bold text-error" id="lblMajor"><span class="w-2 h-2 rounded-full bg-error"></span> 25% Thalassemia Major</span>
+</div>
+</div>
+<!-- Visual 2x2 Punnett Square Table -->
+<div class="grid grid-cols-3 gap-space-xs text-center font-body-sm text-body-sm items-center pt-2">
+<!-- Top Left Empty -->
+<div class="p-2 rounded bg-surface-container-low font-label-md text-label-md text-outline">Partner A ↓ \ B →</div>
+<!-- Maternal Allele 1 -->
+<div class="p-2 rounded bg-surface-container text-primary font-bold font-title-md text-title-md" id="punnettHeaderCol1">HbA (Normal)</div>
+<!-- Maternal Allele 2 -->
+<div class="p-2 rounded bg-surface-container text-primary font-bold font-title-md text-title-md" id="punnettHeaderCol2">β-Thal (Trait)</div>
+<!-- Paternal Allele 1 -->
+<div class="p-2 rounded bg-surface-container text-primary font-bold font-title-md text-title-md" id="punnettHeaderRow1">HbA (Normal)</div>
+<!-- Cell (1,1) -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest border-2 border-secondary/30 flex flex-col items-center" id="cell11">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">HbA / HbA</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Unaffected (25%)</span>
+</div>
+<!-- Cell (1,2) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center" id="cell12">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">HbA / β-Thal</span>
+<span class="font-label-sm text-label-sm text-on-secondary-container font-medium">Carrier Trait (25%)</span>
+</div>
+<!-- Paternal Allele 2 -->
+<div class="p-2 rounded bg-surface-container text-primary font-bold font-title-md text-title-md" id="punnettHeaderRow2">β-Thal (Trait)</div>
+<!-- Cell (2,1) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center" id="cell21">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">HbA / β-Thal</span>
+<span class="font-label-sm text-label-sm text-on-secondary-container font-medium">Carrier Trait (25%)</span>
+</div>
+<!-- Cell (2,2) -->
+<div class="p-space-sm rounded-lg bg-error-container/40 flex flex-col items-center" id="cell22">
+<span class="font-headline-sm text-headline-sm font-bold text-error">β-Thal / β-Thal</span>
+<span class="font-label-sm text-label-sm text-error font-bold">Thal Major (25%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================== RIGHT PANEL: CLINICAL INTERPRETATION & ACTIONS (3 COLS) ==================== -->
+<div class="lg:col-span-3 flex flex-col gap-space-md overflow-y-auto max-h-[750px]">
+<!-- Genetic De-Stigmatization Guidance Box -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm border-l-4 border-l-secondary">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">health_and_safety</span>
+<span class="font-title-md text-title-md text-primary font-bold">Clinical De-Stigmatization</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="text-secondary font-semibold">Being a Carrier is completely healthy:</strong>
+              Trait carriers (বাহক) experience vibrant, completely standard lifespans, perform vigorously in sports, work, and academics, and require no routine medications.
+            </p>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0 mt-0.5">verified</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+<strong>Empowerment, Not Fear:</strong> Pre-marital screening ensures couples possess scientific clarity to protect future offspring through standard reproductive health pathways.
+              </p>
+</div>
+</div>
+<!-- Structured Clinical Action Plan -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<span class="font-title-md text-title-md text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">clinical_notes</span>
+              Recommended Protocol
+            </span>
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+<!-- Step 1 -->
+<div class="flex items-start gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-label-sm flex-shrink-0 mt-0.5">1</div>
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Confirmatory HPLC Testing</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">BSMMU, IEDCR, or accredited tertiary civil laboratories.</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-label-sm flex-shrink-0 mt-0.5">2</div>
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Certified Genetic Counseling</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Empathetic, non-directive counseling with a trained clinician.</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-label-sm flex-shrink-0 mt-0.5">3</div>
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Reproductive Strategy</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Options include Chorionic Villus Sampling (CVS at 10-12 wks), IVF with PGT-M, or pediatric monitoring.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Action Buttons -->
+<div class="flex flex-col gap-space-xs">
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-secondary text-on-secondary font-title-md text-title-md hover:bg-secondary/90 transition-all shadow-sm" id="bookCounselingBtn">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+<span>Book Genetic Counseling</span>
+</button>
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-title-md text-title-md hover:bg-primary-container transition-all shadow-sm" id="findLabBtn">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+<span>Find Nearest HPLC Center</span>
+</button>
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-high text-primary font-label-md text-label-md hover:bg-surface-container-highest transition-all" id="downloadPedigreeBtn">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download De-Identified Report</span>
+</button>
+</div>
+<!-- Fast Helpline Pill -->
+<div class="p-space-xs rounded-lg bg-error-container/30 flex items-center justify-between px-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Thalassemia Helpline (24/7):</span>
+<a class="font-bold text-error font-body-sm text-body-sm hover:underline" href="tel:16263">16263 Ext. 4</a>
+</div>
+</div>
+</div>
+<!-- ==================== BIOETHICS & PRIVACY SAFEGUARD FOOTER ==================== -->
+<div class="px-space-lg py-space-sm bg-surface-container border-t-0 flex flex-col md:flex-row items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">security</span>
+<span>
+<strong>Bioethics Guarantee:</strong> All pedigree calculations are processed strictly in local browser RAM using client-side Mendelian matrix algorithms. No genetic identifiers or names are transmitted to servers.
+          </span>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<span class="text-outline">HHD Protocol v4.2.8</span>
+<span>•</span>
+<span class="text-outline">ACMG/DGHS Guideline Compliant</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification Container for Micro-Interactions -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none p-space-md rounded-xl bg-primary text-on-primary shadow-xl flex items-center gap-space-sm" id="toastNotification">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold" id="toastTitle">Action Completed</span>
+<span class="font-body-sm text-body-sm text-on-primary-container" id="toastMsg">Confidential document generated locally.</span>
+</div>
+</div>
+</div>
+<!-- Client-side Logic for Calculator, Dynamic Punnett Assortment, and Pedigree Updates -->
+<script>
+  (function() {
+    // DOM Elements
+    const p1Select = document.getElementById('person1Select');
+    const p2Select = document.getElementById('person2Select');
+    const p1Badge = document.getElementById('p1Badge');
+    const p2Badge = document.getElementById('p2Badge');
+    const consanguinitySelect = document.getElementById('consanguinitySelect');
+    const consanguinityNote = document.getElementById('consanguinityNote');
+
+    // Risk indicators
+    const riskCategoryPill = document.getElementById('riskCategoryPill');
+    const barNormal = document.getElementById('barNormal');
+    const barCarrier = document.getElementById('barCarrier');
+    const barMajor = document.getElementById('barMajor');
+    const lblNormal = document.getElementById('lblNormal');
+    const lblCarrier = document.getElementById('lblCarrier');
+    const lblMajor = document.getElementById('lblMajor');
+
+    // Punnett Matrix Elements
+    const punnettHeaderCol1 = document.getElementById('punnettHeaderCol1');
+    const punnettHeaderCol2 = document.getElementById('punnettHeaderCol2');
+    const punnettHeaderRow1 = document.getElementById('punnettHeaderRow1');
+    const punnettHeaderRow2 = document.getElementById('punnettHeaderRow2');
+    const cell11 = document.getElementById('cell11');
+    const cell12 = document.getElementById('cell12');
+    const cell21 = document.getElementById('cell21');
+    const cell22 = document.getElementById('cell22');
+
+    // Pedigree Nodes
+    const pedigreeNodeP1Fill = document.getElementById('pedigreeNodeP1Fill');
+    const pedigreeNodeP1Label = document.getElementById('pedigreeNodeP1Label');
+    const pedigreeNodeP2Fill = document.getElementById('pedigreeNodeP2Fill');
+    const pedigreeNodeP2Label = document.getElementById('pedigreeNodeP2Label');
+
+    const offspring4Shape = document.getElementById('offspring4Shape');
+    const offspring4Code = document.getElementById('offspring4Code');
+    const offspring4Label = document.getElementById('offspring4Label');
+
+    // Biomarkers
+    const mcvInput = document.getElementById('mcvInput');
+    const mchInput = document.getElementById('mchInput');
+    const mentzerDisplay = document.getElementById('mentzerDisplay');
+
+    // Interactive Toast Notification
+    const toast = document.getElementById('toastNotification');
+    const toastTitle = document.getElementById('toastTitle');
+    const toastMsg = document.getElementById('toastMsg');
+
+    function showToast(title, msg) {
+      toastTitle.textContent = title;
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3500);
+    }
+
+    // Recalculate Model Engine
+    function updateCalculations() {
+      const g1 = p1Select.value;
+      const g2 = p2Select.value;
+
+      // Update Badges
+      const getBadgeText = (val) => {
+        if (val === 'normal') return 'Normal';
+        if (val === 'beta-thal') return 'β-Thal Carrier';
+        if (val === 'hbe') return 'HbE Carrier';
+        return 'Untested';
+      };
+      p1Badge.textContent = getBadgeText(g1);
+      p2Badge.textContent = getBadgeText(g2);
+
+      // Update Pedigree Genotypes for Couple
+      if (g1 === 'normal') {
+        pedigreeNodeP1Fill.setAttribute('fill', '#ffffff');
+        pedigreeNodeP1Label.textContent = 'Normal (HbA/HbA)';
+        pedigreeNodeP1Label.setAttribute('fill', '#00152a');
+      } else if (g1 === 'beta-thal') {
+        pedigreeNodeP1Fill.setAttribute('fill', '#006a61');
+        pedigreeNodeP1Label.textContent = 'Carrier (HbA/β)';
+        pedigreeNodeP1Label.setAttribute('fill', '#006a61');
+      } else if (g1 === 'hbe') {
+        pedigreeNodeP1Fill.setAttribute('fill', '#1c0047');
+        pedigreeNodeP1Label.textContent = 'Carrier (HbA/HbE)';
+        pedigreeNodeP1Label.setAttribute('fill', '#1c0047');
+      } else {
+        pedigreeNodeP1Fill.setAttribute('fill', '#74777e');
+        pedigreeNodeP1Label.textContent = 'Untested';
+        pedigreeNodeP1Label.setAttribute('fill', '#74777e');
+      }
+
+      if (g2 === 'normal') {
+        pedigreeNodeP2Fill.setAttribute('fill', '#ffffff');
+        pedigreeNodeP2Label.textContent = 'Normal (HbA/HbA)';
+        pedigreeNodeP2Label.setAttribute('fill', '#00152a');
+      } else if (g2 === 'beta-thal') {
+        pedigreeNodeP2Fill.setAttribute('fill', '#006a61');
+        pedigreeNodeP2Label.textContent = 'Carrier (HbA/β)';
+        pedigreeNodeP2Label.setAttribute('fill', '#006a61');
+      } else if (g2 === 'hbe') {
+        pedigreeNodeP2Fill.setAttribute('fill', '#1c0047');
+        pedigreeNodeP2Label.textContent = 'Carrier (HbA/HbE)';
+        pedigreeNodeP2Label.setAttribute('fill', '#1c0047');
+      } else {
+        pedigreeNodeP2Fill.setAttribute('fill', '#74777e');
+        pedigreeNodeP2Label.textContent = 'Untested';
+        pedigreeNodeP2Label.setAttribute('fill', '#74777e');
+      }
+
+      // Risk Matrix Computation
+      let pNormal = 0;
+      let pCarrier = 0;
+      let pMajor = 0;
+      let riskTitle = "";
+      let riskClass = "";
+
+      // Both Carriers of Beta-Thal
+      if (g1 === 'beta-thal' && g2 === 'beta-thal') {
+        pNormal = 25;
+        pCarrier = 50;
+        pMajor = 25;
+        riskTitle = "25% High Probability of Beta-Thalassemia Major";
+        riskClass = "bg-error-container text-on-error-container";
+
+        punnettHeaderCol1.textContent = "HbA (Normal)";
+        punnettHeaderCol2.textContent = "β-Thal";
+        punnettHeaderRow1.textContent = "HbA (Normal)";
+        punnettHeaderRow2.textContent = "β-Thal";
+
+        cell11.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-secondary">HbA / HbA</span><span class="font-label-sm text-label-sm text-secondary font-medium">Unaffected (25%)</span>`;
+        cell12.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-on-surface">HbA / β-Thal</span><span class="font-label-sm text-label-sm text-on-secondary-container font-medium">Carrier Trait (25%)</span>`;
+        cell21.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-on-surface">HbA / β-Thal</span><span class="font-label-sm text-label-sm text-on-secondary-container font-medium">Carrier Trait (25%)</span>`;
+        cell22.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-error">β-Thal / β-Thal</span><span class="font-label-sm text-label-sm text-error font-bold">Thal Major (25%)</span>`;
+
+        offspring4Shape.setAttribute('fill', '#ba1a1a');
+        offspring4Shape.setAttribute('stroke', '#ba1a1a');
+        offspring4Code.textContent = "β/β";
+        offspring4Label.textContent = "25% Major";
+        offspring4Label.setAttribute('fill', '#ba1a1a');
+
+      // One Carrier, One Normal
+      } else if ((g1 === 'beta-thal' && g2 === 'normal') || (g1 === 'normal' && g2 === 'beta-thal') || (g1 === 'hbe' && g2 === 'normal') || (g1 === 'normal' && g2 === 'hbe')) {
+        pNormal = 50;
+        pCarrier = 50;
+        pMajor = 0;
+        riskTitle = "0% Risk of Major Disease (50% Healthy Carrier)";
+        riskClass = "bg-secondary-container text-on-secondary-container";
+
+        punnettHeaderCol1.textContent = "HbA";
+        punnettHeaderCol2.textContent = g2.includes('thal') ? "β-Thal" : (g2.includes('hbe') ? "HbE" : "HbA");
+        punnettHeaderRow1.textContent = "HbA";
+        punnettHeaderRow2.textContent = g1.includes('thal') ? "β-Thal" : (g1.includes('hbe') ? "HbE" : "HbA");
+
+        cell11.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-secondary">HbA / HbA</span><span class="font-label-sm text-label-sm text-secondary font-medium">Unaffected (25%)</span>`;
+        cell12.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-secondary">HbA / HbA</span><span class="font-label-sm text-label-sm text-secondary font-medium">Unaffected (25%)</span>`;
+        cell21.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-on-surface">HbA / Trait</span><span class="font-label-sm text-label-sm text-on-secondary-container font-medium">Carrier Trait (25%)</span>`;
+        cell22.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-on-surface">HbA / Trait</span><span class="font-label-sm text-label-sm text-on-secondary-container font-medium">Carrier Trait (25%)</span>`;
+
+        offspring4Shape.setAttribute('fill', '#ffffff');
+        offspring4Shape.setAttribute('stroke', '#006a61');
+        offspring4Code.textContent = "HbA";
+        offspring4Label.textContent = "25% Normal";
+        offspring4Label.setAttribute('fill', '#006a61');
+
+      // Both Normal
+      } else if (g1 === 'normal' && g2 === 'normal') {
+        pNormal = 100;
+        pCarrier = 0;
+        pMajor = 0;
+        riskTitle = "0% Risk: Baseline Population Transmission";
+        riskClass = "bg-secondary-container text-on-secondary-container";
+
+        punnettHeaderCol1.textContent = "HbA";
+        punnettHeaderCol2.textContent = "HbA";
+        punnettHeaderRow1.textContent = "HbA";
+        punnettHeaderRow2.textContent = "HbA";
+
+        cell11.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-secondary">HbA / HbA</span><span class="font-label-sm text-label-sm text-secondary font-medium">Normal (25%)</span>`;
+        cell12.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-secondary">HbA / HbA</span><span class="font-label-sm text-label-sm text-secondary font-medium">Normal (25%)</span>`;
+        cell21.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-secondary">HbA / HbA</span><span class="font-label-sm text-label-sm text-secondary font-medium">Normal (25%)</span>`;
+        cell22.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-secondary">HbA / HbA</span><span class="font-label-sm text-label-sm text-secondary font-medium">Normal (25%)</span>`;
+
+        offspring4Shape.setAttribute('fill', '#ffffff');
+        offspring4Shape.setAttribute('stroke', '#006a61');
+        offspring4Code.textContent = "HbA";
+        offspring4Label.textContent = "25% Normal";
+        offspring4Label.setAttribute('fill', '#006a61');
+
+      // Carrier beta-thal x Carrier HbE (HbE/Beta Thalassemia Disease)
+      } else if ((g1 === 'beta-thal' && g2 === 'hbe') || (g1 === 'hbe' && g2 === 'beta-thal')) {
+        pNormal = 25;
+        pCarrier = 50;
+        pMajor = 25;
+        riskTitle = "25% Probability of HbE / β-Thalassemia Compound Heterozygote";
+        riskClass = "bg-error-container text-on-error-container";
+
+        punnettHeaderCol1.textContent = "HbA";
+        punnettHeaderCol2.textContent = "HbE";
+        punnettHeaderRow1.textContent = "HbA";
+        punnettHeaderRow2.textContent = "β-Thal";
+
+        cell11.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-secondary">HbA / HbA</span><span class="font-label-sm text-label-sm text-secondary font-medium">Normal (25%)</span>`;
+        cell12.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-on-surface">HbA / HbE</span><span class="font-label-sm text-label-sm text-on-secondary-container font-medium">HbE Trait (25%)</span>`;
+        cell21.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-on-surface">HbA / β-Thal</span><span class="font-label-sm text-label-sm text-on-secondary-container font-medium">β-Thal Trait (25%)</span>`;
+        cell22.innerHTML = `<span class="font-headline-sm text-headline-sm font-bold text-error">β-Thal / HbE</span><span class="font-label-sm text-label-sm text-error font-bold">HbE/β-Thal (25%)</span>`;
+
+        offspring4Shape.setAttribute('fill', '#ba1a1a');
+        offspring4Shape.setAttribute('stroke', '#ba1a1a');
+        offspring4Code.textContent = "β/E";
+        offspring4Label.textContent = "25% HbE/β-Thal";
+        offspring4Label.setAttribute('fill', '#ba1a1a');
+
+      // Unknown status
+      } else {
+        pNormal = 75;
+        pCarrier = 20;
+        pMajor = 5;
+        riskTitle = "Indeterminate Risk: HPLC Screening Advised";
+        riskClass = "bg-surface-container-high text-on-surface";
+      }
+
+      // Update Bar Widths & Labels
+      barNormal.style.width = pNormal + '%';
+      barCarrier.style.width = pCarrier + '%';
+      barMajor.style.width = pMajor + '%';
+
+      lblNormal.innerHTML = `<span class="w-2 h-2 rounded-full bg-secondary"></span> ${pNormal}% Unaffected Normal`;
+      lblCarrier.innerHTML = `<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span> ${pCarrier}% Carrier Trait`;
+      lblMajor.innerHTML = `<span class="w-2 h-2 rounded-full bg-error"></span> ${pMajor}% Major Disease Risk`;
+
+      riskCategoryPill.className = `px-space-sm py-[2px] rounded-full font-label-md text-label-md font-bold ${riskClass}`;
+      riskCategoryPill.textContent = riskTitle;
+    }
+
+    // Consanguinity Contextual Handler
+    consanguinitySelect.addEventListener('change', (e) => {
+      const val = e.target.value;
+      if (val === 'first-cousin') {
+        consanguinityNote.innerHTML = '<span class="text-error font-medium">Elevated Coefficient of Inbreeding (F = 1/16).</span> Shared ancestral alleles significantly increase the probability of autosomal recessive homozygosity in offspring.';
+      } else if (val === 'second-cousin') {
+        consanguinityNote.innerHTML = '<span class="text-primary font-medium">Moderate Inbreeding (F = 1/64).</span> Mildly increased risk; pre-marital HPLC screening recommended.';
+      } else {
+        consanguinityNote.innerHTML = 'Standard Mendelian assortment applied. Non-related background coefficient of inbreeding (F = 0).';
+      }
+    });
+
+    // Mentzer Index Calculation
+    function updateMentzer() {
+      const mcv = parseFloat(mcvInput.value) || 0;
+      const rbc = 5.8; // Baseline estimated microcytic RBC count
+      const mentzer = (mcv / rbc).toFixed(1);
+      mentzerDisplay.innerHTML = `<span>${mentzer}</span> <span class="text-label-sm">${mentzer < 13 ? '&lt;13 Thal Trait' : '&ge;13 Iron Defic'}</span>`;
+    }
+
+    mcvInput.addEventListener('input', updateMentzer);
+
+    // Event Listeners for Genotype Selectors
+    p1Select.addEventListener('change', updateCalculations);
+    p2Select.addEventListener('change', updateCalculations);
+
+    // Action Buttons
+    document.getElementById('resetModelBtn').addEventListener('click', () => {
+      p1Select.value = 'beta-thal';
+      p2Select.value = 'beta-thal';
+      consanguinitySelect.value = 'unrelated';
+      consanguinityNote.textContent = 'Standard Mendelian assortment applied. Non-related background coefficient of inbreeding (F = 0).';
+      mcvInput.value = '68.2';
+      mchInput.value = '21.4';
+      updateCalculations();
+      updateMentzer();
+      showToast('Model Reset', 'Pedigree and Punnett square restored to baseline defaults.');
+    });
+
+    document.getElementById('printReportBtn').addEventListener('click', () => {
+      showToast('Generating Confidential PDF', 'De-identified clinical risk summary prepared for print.');
+      setTimeout(() => { window.print(); }, 600);
+    });
+
+    document.getElementById('bookCounselingBtn').addEventListener('click', () => {
+      showToast('Counseling Gateway Opened', 'Connecting with DGHS Certified Genetic Counselor directory...');
+    });
+
+    document.getElementById('findLabBtn').addEventListener('click', () => {
+      showToast('Locating Accredited Centers', 'Filtering 64 district hospitals with automated HPLC systems.');
+    });
+
+    document.getElementById('downloadPedigreeBtn').addEventListener('click', () => {
+      showToast('Pedigree Vector Exported', 'Standard FHIR-compliant pedigree JSON and SVG packaged locally.');
+    });
+
+    document.getElementById('closeModalBtn').addEventListener('click', () => {
+      showToast('Modal Closed', 'Returning to national thalassemia epidemiology workspace.');
+    });
+
+    // Run Initial Update
+    updateCalculations();
+    updateMentzer();
+  })();
+</script></main></div></body></html>

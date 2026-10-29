@@ -1,0 +1,239 @@
+---
+name: Institutional Health Authority
+colors:
+  surface: '#f9f9ff'
+  surface-dim: '#cfdaf2'
+  surface-bright: '#f9f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f0f3ff'
+  surface-container: '#e7eeff'
+  surface-container-high: '#dee8ff'
+  surface-container-highest: '#d8e3fb'
+  on-surface: '#111c2d'
+  on-surface-variant: '#43474d'
+  inverse-surface: '#263143'
+  inverse-on-surface: '#ecf1ff'
+  outline: '#74777e'
+  outline-variant: '#c3c6ce'
+  surface-tint: '#49607c'
+  primary: '#00152a'
+  on-primary: '#ffffff'
+  primary-container: '#102a43'
+  on-primary-container: '#7a92b0'
+  inverse-primary: '#b0c9e8'
+  secondary: '#006a61'
+  on-secondary: '#ffffff'
+  secondary-container: '#86f2e4'
+  on-secondary-container: '#006f66'
+  tertiary: '#1c0047'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#35007a'
+  on-tertiary-container: '#a375ff'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#d1e4ff'
+  primary-fixed-dim: '#b0c9e8'
+  on-primary-fixed: '#011d35'
+  on-primary-fixed-variant: '#314863'
+  secondary-fixed: '#89f5e7'
+  secondary-fixed-dim: '#6bd8cb'
+  on-secondary-fixed: '#00201d'
+  on-secondary-fixed-variant: '#005049'
+  tertiary-fixed: '#eaddff'
+  tertiary-fixed-dim: '#d2bbff'
+  on-tertiary-fixed: '#25005a'
+  on-tertiary-fixed-variant: '#5a00c6'
+  background: '#f9f9ff'
+  on-background: '#111c2d'
+  surface-variant: '#d8e3fb'
+typography:
+  display-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 48px
+    fontWeight: '700'
+    lineHeight: 56px
+  display-lg-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 44px
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 40px
+  headline-lg-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 26px
+    fontWeight: '700'
+    lineHeight: 34px
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+  title-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+  body-md:
+    fontFamily: Inter
+    fontSize: 15px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 20px
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.05em
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.04em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+This design system establishes an authoritative, scientifically rigorous, and deeply human visual framework. Designed primarily for high-stakes public health, genetic intelligence, and population-level human development initiatives across the Global South, the system blends institutional confidence with inclusive clarity.
+
+The aesthetic philosophy adheres to **Corporate / Modern** principles infused with clinical precision:
+- **Tone & Demeanor:** Trustworthy, objective, empathetic, and forward-looking. Visuals avoid cold clinical sterility while maintaining unwavering epidemiological rigor.
+- **Audience:** Healthcare professionals, genetic researchers, community health workers, policy makers, and individuals across multilingual contexts (English and Bengali).
+- **Visual Tenets:** Generous whitespace, precise micro-borders, clear structural hierarchy, and functional semantic color coding to distinguish between clinical genetics, preventative wellness, technology analytics, and urgent public alerts.
+
+## Colors
+
+The palette is engineered to communicate credibility while enabling multi-domain clinical and research categorizations.
+
+- **Primary (`#102A43` - Deep Navy):** Anchors navigation bars, institutional banners, primary actions, and primary typography. Represents stability and structural integrity.
+- **Secondary (`#0D9488` - Health Teal):** Represents proactive prevention, clinical education, wellness screenings, and public health campaigns.
+- **Tertiary (`#7C3AED` - Vibrant Violet):** Dedicated to specialized genetic health, genomics registries, hemoglobinopathy tracking, and scientific innovation.
+- **Supporting Accents & Functional Indicators:**
+  - **Electric Blue (`#3B82F6`):** Applied to telemetry, machine learning models, predictive intelligence, and system analytics.
+  - **Coral (`#F97373`):** High-priority alerts, community mobilization initiatives, and carrier awareness drives.
+  - **Warm Amber (`#F59E0B`):** Statistical notices, observational metrics, and clinical caution flags.
+  - **Emerald (`#10B981`):** Verified carrier screens, completed clinical protocols, and validated outcomes.
+- **Canvas & Surface Base:** Background surfaces utilize clean neutrals (`#F7FAFC` to `#F1F5F9`), paired with `#FFFFFF` card layers and deep slate (`#1E293B`) body copy to maintain WCAG AAA contrast ratios.
+
+## Typography
+
+Typography pairs **Plus Jakarta Sans** for headlines and structural titles with **Inter** for clinical data, tabular findings, and extended narrative sections.
+
+- **Plus Jakarta Sans:** Provides modern, geometric warmth with distinct counters that remain legible in prominent titles and analytical cards.
+- **Inter:** Ensures high legibility across dense data tables, medical research summaries, and multilingual script interfaces.
+- **Bilingual Typographic Balancing:** When rendering parallel English and Bengali (à¦¬à¦¾à¦‚à¦²à¦¾) text:
+  - Bengali scripts display naturally taller ascenders and descenders. Increase relative line height by 15% to 20% on all body text when rendering Bengali content.
+  - Maintain identical optical weights between Latin and Bengali typefaces to preserve visual parity in side-by-side or stacked translations.
+
+## Layout & Spacing
+
+The layout is constructed on an accessible 8pt spatial grid designed to accommodate dense epidemiological data while remaining usable on handheld devices in low-connectivity settings.
+
+- **Grid Systems:**
+  - **Desktop (HL
+NŠŠˆL‹XÛÛ[[ˆ›ZYÜšYˆÛÛ[[ˆİ]\ˆ\ÈK\™[X
+İ]\˜
+Kİ]\ˆÙXİ[ÛˆX\™Ú[ˆ\Èœ™[X
+X\™Ú[˜
+HÚ]HX^[][HÛÛZ[™\ˆ›İ[™[™ÈÚYÙˆL‚ˆH
+Š•X›]
+Í8 $ÈLŒÜ
+NŠŠˆXÛÛ[[ˆÜšYÚ]KŒ\™[Xİ]\œÈ[™K\™[Xİ]\ˆØ[˜\ÈY[™Ë‚ˆH
+Š“[Øš[H
+Í
+NŠŠˆXÛÛ[[ˆÜšYˆÛÛ[[ˆİ]\ˆ›ÜÈÈ\™[X
+İ]\‹[[Øš[X
+Kİ]\ˆØÜ™Y[ˆX\™Ú[ˆ›ÜÈÈ\™[X
+X\™Ú[‹[[Øš[X
+K‚‹H
+Š’[\›˜[ÜXÚ[™ÈÚÙ[œÎŠŠ‚ˆHZXÜ›ÈY[™ÜÈ
+ÜXÙK^ØÜXÙK\ÛX
+H\™H™\Ù\™Y›Üˆ[˜YÙ\Ë]Ûˆ[\›˜[[œÙ]Ë[™ÛÛ\XİX›HÙ[Ë‚ˆHÛÛ\Û™[^[İ]È][^™HÜXÙK[Y
+\™[X
+H[™ÜXÙK[Ø
+K\™[X
+H›Üˆİ[™\™Ø\™ÛÛZ[›Y[Ù\\˜][™ÈÙXİ[ÛˆXY\œÈœ›ÛH]H›İÜË‚ˆHÜXÙK^
+‹\™[X
+HYš[™\ÈİXİ\˜[Ø\È™]ÙY[ˆ\İ[˜İ[X]XÈ[Ù[\È[™\Ú›Ø\™›ØÚÜË‚‚ˆÈÈ[]˜][Ûˆ	ˆ\‚•ÈXZ[Z[ˆHÛ[šXØ[]šY[˜ÙKX˜\ÙYš\İX[Y\˜\˜ÚKHŞ\İ[H\ØÚ]ÜÈX]H›ÜÚYİÜÈ[ˆ˜]›ÜˆÙˆ
+Š•Û˜[^Y\œÊŠˆÛİ\YÚ]
+Š“İËPÛÛ˜\İİ][™\ÊŠ‹‚‚‹H
+Š”İ\™˜XÙHY\œÎŠŠ‚ˆH
+Š“]™[
+Ø[˜\ÊNŠŠˆÛÙÙ™‹]Ú]H˜\ÙH
+ÑÑQØ
+K‚ˆH
+Š“]™[H
+Ø\™Ë[Ù[\ÊNŠŠˆÑ‘‘‘‘‘˜İ\™˜XÙ\È^Y\™YÚ]H™XÚ\ÙH\›Ü™\ˆİ›ÚÙH
+ÑL‘NŒ
+K‚ˆH
+Š“]™[ˆ
+›ÜİÛœË›Ø][™Èİ™\›^\ËX[ÙÜÊNŠŠˆÑ‘‘‘‘‘˜›Ü™\™YÚ]ĞĞ‘QLX[™[ˆ[XšY[İË[ÜXÚ]HÚYİÈ
+›Ş\ÚYİÎˆMœLœ™Ø˜JM‹‹ËŒ
+X
+K‚‹H
+Š‘\™Xİ[Û˜[ÚYİÜÎŠŠˆ\™Ù™œÙ]È[™ÛÛÜ™YÛİÈ›\œÈ\™H›ÚXš]Yˆ[\]\İ[Y\™ÙHœ›ÛHİXİ\˜[ÛÛZ[›Y[ÛÛ˜\İ›Ü™\œË[™İXH˜]K][Y[XšY[ØØÛ\Ú[Û‹‚‚ˆÈÈÚ\\Â‚•H\ÚYÛˆŞ\İ[Hİ[™\™^™\ÈÛˆ]™[
+ŠŒˆ
+›İ[™Y
+JŠˆÚ\HÙ[ÛY]Kˆ\È[]™\œÈH\[™X›K[X[‹XÙ[\™Y˜[[˜ÙH™]ÙY[ˆYZ[š\İ˜]]™HİXİ\™H[™\›ØXÚX›H[Ù\›ˆX[Ø\™H[\™˜XÙ\Ë‚‚‹H
+Š˜\ÙH˜Y]\È
+\™[HÈ
+NŠŠˆ\YYÈİ[™\™[\˜Xİ]™H[[Y[È[˜ÛY[™Èš[X\H]ÛœË[œ]šY[Ë[™İ[™\™[˜[]XØ[Ø\™Ë‚‹H
+Š“\™ÙH˜Y]\È
+\™[HÈMœ
+NŠŠˆ\YYÈİXİ\˜[ÛÛZ[™\œË[Ù[[™[Ë[™YÚYÚ\Ú›Ø\™Ë‚‹H
+Š”[^Ù\[Ûˆ
+NNN\
+NŠŠˆ\YYÈİ]\È˜YÙ\Ëš[[™İX[[™İXYÙHÙÙÛ\È
+Sˆ8)«8)¯¸) ¸)¬¸)¯ŠKØ]YÛÜHÚ\Ë[™Y]šXÈ[™XØ]ÜœË‚‚ˆÈÈÛÛ\Û™[Â‚ˆÈÈÈ]ÛœÂ‹H
+Š”š[X\NŠŠˆ˜XÚÙÜ›İ[™ÌLMØ^Ñ‘‘‘‘‘˜›İ[™Y™\ÜÈ\™[Xˆİ™\ˆİ]H˜[œÚ][ÛœÈÈÌQLĞMQ˜Ú]™\›È›\ˆÚY‚‹H
+Š”ÙXÛÛ™\HÈØÚY[YšXÈXİ[ÛŠŠˆ˜XÚÙÜ›İ[™ÌM^Ñ‘‘‘‘‘˜ˆ\ÙYİšXİH›Üˆ™]™[[Ûˆ[™X[™YÚ\İ˜][ÛˆÕ\Ë‚‹H
+Š•\X\HÈ™\ÙX\˜ÚXİ[ÛŠŠˆİ][™Y\›Ü™\ˆ\Ú[™ÈÍĞÌĞQQ^ÍĞÌĞQQ˜XÚÙÜ›İ[™˜[œÜ\™[ˆİ™\ˆ˜[œÚ][ÛœÈÈÍĞÌĞQQ]	XÜXÚ]K‚‹H
+Š•İXÚ\™Ù]ŠŠˆZ[š[][HZYÚXÜ›ÜÜÈ[[Øš[H[\™˜XÙ\ÈÈİ\ÜšY[X[Ü\˜]ÜœË‚‚ˆÈÈÈÚ\È	ˆ[˜YÙ\Â‹H
+Š”İ]\ÈÚ\ÎŠŠˆZYÚÜš^›Û[Y[™ÈÍ\™[X[[›Ü™\ˆ˜Y]\È
+NNN\
+K‚ˆH
+‘Ù[™]XÜÈÈ[\ÜÙ[ZXNŠˆ˜XÚÙÜ›İ[™ÑQŒÑ‘˜^ÍĞÌĞQQ›Ü™\ˆ\ÛÛYÑ‘‘X‚ˆH
+”™]™[[ÛˆÈY™\İ[NŠˆ˜XÚÙÜ›İ[™ÑŒ‘X^ÌM›Ü™\ˆ\ÛÛYÎNQ‘M‚ˆH
+•™\šYšYYİXØÙ\ÜÎŠˆ˜XÚÙÜ›İ[™ÑPÑ‘X^ÌLNX›Ü™\ˆ\ÛÛYĞMÑŒÑ‚ˆH
+”š\ÚÈÈ[\Šˆ˜XÚÙÜ›İ[™Ñ‘QŒ‘Œ˜^ÑMÌÍÌØ›Ü™\ˆ\ÛÛYÑ‘PĞPĞX‚‚ˆÈÈÈš[[™İX[[™İXYÙH[™XØ]ÜœÂ‹HÙYÛY[Y[İÚ]Ú\È™X]\š[™ÈX[[X™[\Ü^NˆS˜È8)«8)¯¸) ¸)¬¸)¯˜ˆHXİ]™HÙ[Xİ[ÛˆYÜÈÌLMØÚ]Ú]H^ÈH[˜Xİ]™Hİ]HÚ]ÈÛˆÑŒQQXÚ]ÍÍMMX^‚‚ˆÈÈÈØ\™Â‹HÛÛœİXİYÚ]Ñ‘‘‘‘‘˜˜XÚÙÜ›İ[™\™[XÛÜ›™\ˆ˜Y]\Ë[™\›Ü™\ˆ[ˆÑL‘NŒ‚‹HØ\™XY\œÈ™X]\™H[ˆÜ[Û˜[ÜÛÛYXØÙ[[H[Û™ÈHYYÙH™Y›Xİ[™ÈHØ]YÛÜHÛÛÜˆ
+K™Ë‹ÍĞÌĞQQ›ÜˆÙ[™]XÈØÜ™Y[š[™ÈY]šXÜËÌM›ÜˆÜ[][Ûˆ™]™[[Ûˆ[™^\ÊK‚‚ˆÈÈÈ›Ü›H[œ]Â‹H˜XÚÙÜ›İ[™Ñ‘‘‘‘‘˜›Ü™\ˆ\ÛÛYĞĞ‘QLX›İ[™Y™\ÜÈ\™[X[\›˜[Y[™ÈŒ\™[HÍ\™[Xˆ›Øİ\Èš[™È\Ù\ÈHœ›Øİ\Èİ›ÚÙH[ˆÌĞ‘˜Ú][ˆÙ™œÙ]Ùˆœˆ\œ›Üˆİ]\È[\ŞHÑMÌÍÌØÚ]^[˜]ÜH[\ˆ^‚‚ˆÈÈÈÚXÚØ›Ş\È	ˆ˜Y[ÈÛÛ›ÛÂ‹H˜\ÙHX[Y]\‹İÚYÙˆN›Ü™\ˆK\ÛÛYÎMLĞˆÙ[XİYİ]H™[™\œÈÌLMØš[Ú]Ú]HÚXÚËÙİXÛÛ‹‚‚ˆÈÈÈ]H	ˆY]šXÈš\İX[^˜][ÛœÂ‹H]HX›\È™X]\™H[\›˜]H›İÈİš\[™È
+Ñ‘‘‘‘‘˜[™ÑQØ
+KİXÚŞHXY\œÈÚ]ÌLMØX™[İ[[™Ë[™[Û›ËX[YÛ™Y[Y\šXØ[˜[Y\È[ˆ[\˜
